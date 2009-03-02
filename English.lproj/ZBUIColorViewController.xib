@@ -43,35 +43,35 @@
 					<object class="NSCustomView" id="680996134">
 						<reference key="NSNextResponder" ref="1005"/>
 						<int key="NSvFlags">266</int>
-						<string key="NSFrame">{{20, 339}, {288, 90}}</string>
+						<string key="NSFrame">{{20, 276}, {288, 69}}</string>
 						<reference key="NSSuperview" ref="1005"/>
 						<string key="NSClassName">ZBSourceCodeView</string>
 					</object>
 					<object class="NSCustomView" id="629263727">
 						<reference key="NSNextResponder" ref="1005"/>
 						<int key="NSvFlags">266</int>
-						<string key="NSFrame">{{20, 241}, {288, 90}}</string>
+						<string key="NSFrame">{{20, 199}, {288, 69}}</string>
 						<reference key="NSSuperview" ref="1005"/>
 						<string key="NSClassName">ZBSourceCodeView</string>
 					</object>
 					<object class="NSCustomView" id="347582153">
 						<reference key="NSNextResponder" ref="1005"/>
 						<int key="NSvFlags">266</int>
-						<string key="NSFrame">{{20, 118}, {288, 90}}</string>
+						<string key="NSFrame">{{20, 97}, {288, 69}}</string>
 						<reference key="NSSuperview" ref="1005"/>
 						<string key="NSClassName">ZBSourceCodeView</string>
 					</object>
 					<object class="NSCustomView" id="608108146">
 						<reference key="NSNextResponder" ref="1005"/>
 						<int key="NSvFlags">266</int>
-						<string key="NSFrame">{{20, 20}, {288, 90}}</string>
+						<string key="NSFrame">{{20, 20}, {288, 69}}</string>
 						<reference key="NSSuperview" ref="1005"/>
 						<string key="NSClassName">ZBSourceCodeView</string>
 					</object>
 					<object class="NSTextField" id="104297126">
 						<reference key="NSNextResponder" ref="1005"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{17, 437}, {96, 17}}</string>
+						<string key="NSFrame">{{17, 353}, {96, 17}}</string>
 						<reference key="NSSuperview" ref="1005"/>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSTextFieldCell" key="NSCell" id="63482851">
@@ -107,7 +107,7 @@
 					<object class="NSTextField" id="901818194">
 						<reference key="NSNextResponder" ref="1005"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{17, 216}, {115, 17}}</string>
+						<string key="NSFrame">{{17, 174}, {115, 17}}</string>
 						<reference key="NSSuperview" ref="1005"/>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSTextFieldCell" key="NSCell" id="406436412">
@@ -123,7 +123,7 @@
 					<object class="NSBox" id="673890572">
 						<reference key="NSNextResponder" ref="1005"/>
 						<int key="NSvFlags">12</int>
-						<string key="NSFrame">{{118, 435}, {190, 5}}</string>
+						<string key="NSFrame">{{118, 351}, {190, 5}}</string>
 						<reference key="NSSuperview" ref="1005"/>
 						<string key="NSOffsets">{0, 0}</string>
 						<object class="NSTextFieldCell" key="NSTitleCell">
@@ -153,7 +153,7 @@
 					<object class="NSBox" id="18919520">
 						<reference key="NSNextResponder" ref="1005"/>
 						<int key="NSvFlags">12</int>
-						<string key="NSFrame">{{137, 214}, {171, 5}}</string>
+						<string key="NSFrame">{{137, 172}, {171, 5}}</string>
 						<reference key="NSSuperview" ref="1005"/>
 						<string key="NSOffsets">{0, 0}</string>
 						<object class="NSTextFieldCell" key="NSTitleCell">
@@ -173,7 +173,7 @@
 						<bool key="NSTransparent">NO</bool>
 					</object>
 				</object>
-				<string key="NSFrameSize">{328, 474}</string>
+				<string key="NSFrameSize">{328, 390}</string>
 				<reference key="NSSuperview"/>
 				<string key="NSClassName">NSView</string>
 			</object>
@@ -258,12 +258,12 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="104297126"/>
 							<reference ref="680996134"/>
+							<reference ref="673890572"/>
 							<reference ref="629263727"/>
+							<reference ref="901818194"/>
+							<reference ref="18919520"/>
 							<reference ref="347582153"/>
 							<reference ref="608108146"/>
-							<reference ref="673890572"/>
-							<reference ref="18919520"/>
-							<reference ref="901818194"/>
 						</object>
 						<reference key="parent" ref="1002"/>
 					</object>
@@ -354,7 +354,7 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilderKit</string>
 					<string>com.apple.InterfaceBuilderKit</string>
-					<string>{{284, 336}, {328, 474}}</string>
+					<string>{{284, 420}, {328, 390}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>{628, 654}</string>
 					<string>{{217, 442}, {480, 272}}</string>

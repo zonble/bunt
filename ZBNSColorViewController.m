@@ -7,7 +7,7 @@
 //
 
 #import "ZBNSColorViewController.h"
-
+#import "ZBMainWindowController.h"
 
 @implementation ZBNSColorViewController
 
@@ -46,5 +46,11 @@
 	[_cmykView setText:cmykString];
 }
 
+- (IBAction)changeSettingAction:(id)sender
+{
+	ZBMainWindowController *controller = (ZBMainWindowController *)[[NSApplication sharedApplication] delegate];
+	NSColor *color = [controller currentColor];
+	[self updateWithColor:color];
+}
 
 @end

@@ -22,16 +22,17 @@
 - (void)_init
 {
 	[self setAutoresizingMask: NSViewWidthSizable];
-	_copyButton = [[NSButton alloc] initWithFrame:NSMakeRect(NSMaxX([self bounds]) - 100, NSMaxY([self bounds]) - 19, 100, 19)];
+	_copyButton = [[NSButton alloc] initWithFrame:NSMakeRect(NSMaxX([self bounds]) - 70, NSMaxY([self bounds]) - 20, 70, 19)];
 	[_copyButton setButtonType:NSMomentaryLightButton];
 	[_copyButton setBezelStyle:NSRoundRectBezelStyle];
 	[_copyButton setAutoresizingMask:NSViewMinXMargin];
+	[_copyButton setFont:[NSFont systemFontOfSize:[NSFont labelFontSize]]];
 	[_copyButton setTitle:@"Copy"];
 	[_copyButton setTarget:self];
 	[_copyButton setAction:@selector(copyTextAction:)];
 	[self addSubview:_copyButton];
 	
-	_titleLabel = [[NSTextField alloc] initWithFrame:NSMakeRect(NSMinX([self bounds]), NSMaxY([self bounds]) - 19, [self bounds].size.width - 120, 19)];
+	_titleLabel = [[NSTextField alloc] initWithFrame:NSMakeRect(NSMinX([self bounds]), NSMaxY([self bounds]) - 19, [self bounds].size.width - 100, 19)];
 //	[_titleLabel setStringValue:@"Title"];
 	[_titleLabel setFont:[NSFont systemFontOfSize:[NSFont systemFontSize]]];
 	[_titleLabel setBackgroundColor:[NSColor controlColor]];
@@ -44,6 +45,8 @@
 	[_sourceCodeTextField setEditable:NO];
 	[_sourceCodeTextField setSelectable:YES];
 //	[_sourceCodeTextField setStringValue:@"Test"];
+	[_sourceCodeTextField setFocusRingType:NSFocusRingTypeNone];
+	[_sourceCodeTextField setFont:[NSFont systemFontOfSize:10.0]];
 	[_sourceCodeTextField setAutoresizingMask: NSViewWidthSizable | NSViewHeightSizable];
 	[self addSubview:_sourceCodeTextField];
 }

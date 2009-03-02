@@ -17,4 +17,6 @@
 	IBOutlet ZBSourceCodeView *_cmykView;	
 }
 
+- (IBAction)changeSettingAction:(id)sender;
+
 @end
