@@ -24,6 +24,8 @@
 		D4FFBA720F5C5A5100B34E9C /* ZBSourceCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = D4FFBA710F5C5A5100B34E9C /* ZBSourceCodeView.m */; };
 		D4FFBC370F5C832F00B34E9C /* NSColorItem.png in Resources */ = {isa = PBXBuildFile; fileRef = D4FFBC350F5C832F00B34E9C /* NSColorItem.png */; };
 		D4FFBC380F5C832F00B34E9C /* UIColorItem.png in Resources */ = {isa = PBXBuildFile; fileRef = D4FFBC360F5C832F00B34E9C /* UIColorItem.png */; };
+		D4FFBC520F5C84AE00B34E9C /* GLColorItem.png in Resources */ = {isa = PBXBuildFile; fileRef = D4FFBC510F5C84AE00B34E9C /* GLColorItem.png */; };
+		D4FFBC640F5C867B00B34E9C /* CGColorItem.png in Resources */ = {isa = PBXBuildFile; fileRef = D4FFBC630F5C867B00B34E9C /* CGColorItem.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +59,8 @@
 		D4FFBA710F5C5A5100B34E9C /* ZBSourceCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBSourceCodeView.m; sourceTree = "<group>"; };
 		D4FFBC350F5C832F00B34E9C /* NSColorItem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = NSColorItem.png; path = Images/NSColorItem.png; sourceTree = "<group>"; };
 		D4FFBC360F5C832F00B34E9C /* UIColorItem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = UIColorItem.png; path = Images/UIColorItem.png; sourceTree = "<group>"; };
+		D4FFBC510F5C84AE00B34E9C /* GLColorItem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GLColorItem.png; path = Images/GLColorItem.png; sourceTree = "<group>"; };
+		D4FFBC630F5C867B00B34E9C /* CGColorItem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CGColorItem.png; path = Images/CGColorItem.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +172,8 @@
 			children = (
 				D4FFBC350F5C832F00B34E9C /* NSColorItem.png */,
 				D4FFBC360F5C832F00B34E9C /* UIColorItem.png */,
+				D4FFBC630F5C867B00B34E9C /* CGColorItem.png */,
+				D4FFBC510F5C84AE00B34E9C /* GLColorItem.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -223,6 +229,8 @@
 				D43E2CBF0F5C4D8C002C282A /* ZBGLColorViewController.xib in Resources */,
 				D4FFBC370F5C832F00B34E9C /* NSColorItem.png in Resources */,
 				D4FFBC380F5C832F00B34E9C /* UIColorItem.png in Resources */,
+				D4FFBC520F5C84AE00B34E9C /* GLColorItem.png in Resources */,
+				D4FFBC640F5C867B00B34E9C /* CGColorItem.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

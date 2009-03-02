@@ -40,7 +40,7 @@ static NSString *glcolorIdentifier = @"GLColor";
 	[toolbar setVisible:YES];
 	[toolbar setSizeMode:NSToolbarSizeModeRegular];
 	[toolbar setAllowsUserCustomization:NO];
-	[toolbar setAutosavesConfiguration:YES];
+	[toolbar setAutosavesConfiguration:NO];
 	[[self window] setToolbar:toolbar];
 	
 	[toolbar setSelectedItemIdentifier:nscolorIdentifier];
@@ -134,7 +134,7 @@ static NSString *glcolorIdentifier = @"GLColor";
 		[item setImage:nil];
 		[item setTarget:self];
 		[item setAction:@selector(toggleViewAction:)];
-		[item setImage:[NSImage imageNamed:@"UIColorItem"]];		
+		[item setImage:[NSImage imageNamed:@"UIColorItem"]];
 		return item;
 	}
 	else if ([itemIdentifier isEqualToString:cgcolorIdentifier]) {
@@ -144,6 +144,7 @@ static NSString *glcolorIdentifier = @"GLColor";
 		[item setImage:nil];
 		[item setTarget:self];
 		[item setAction:@selector(toggleViewAction:)];
+		[item setImage:[NSImage imageNamed:@"CGColorItem"]];
 		return item;
 	}
 	else if ([itemIdentifier isEqualToString:glcolorIdentifier]) {
@@ -153,6 +154,7 @@ static NSString *glcolorIdentifier = @"GLColor";
 		[item setImage:nil];
 		[item setTarget:self];
 		[item setAction:@selector(toggleViewAction:)];
+		[item setImage:[NSImage imageNamed:@"GLColorItem"]];
 		return item;
 	}
 	
