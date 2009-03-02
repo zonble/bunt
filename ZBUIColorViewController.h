@@ -11,7 +11,10 @@
 
 @interface ZBUIColorViewController : ZBViewController 
 {
-
+	IBOutlet ZBSourceCodeView *_classHSBView;	
+	IBOutlet ZBSourceCodeView *_classRGBView;
+	IBOutlet ZBSourceCodeView *_instanceHSBView;	
+	IBOutlet ZBSourceCodeView *_instanceRGBView;
 }
 
 @end
