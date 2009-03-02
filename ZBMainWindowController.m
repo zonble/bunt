@@ -22,6 +22,7 @@ static NSString *glcolorIdentifier = @"GLColor";
 	[_uiColorController release];
 	[_cgColorController release];
 	[_glColorController release];
+	[_statusBarItem release];
 	[super dealloc];
 }
 
@@ -43,9 +44,30 @@ static NSString *glcolorIdentifier = @"GLColor";
 	[toolbar setAutosavesConfiguration:NO];
 	[[self window] setToolbar:toolbar];
 	
-	[toolbar setSelectedItemIdentifier:nscolorIdentifier];
-	[self setContentViewWithView:[_nsColorController view]];
+	NSStatusBar *bar = [NSStatusBar systemStatusBar];
+	
+    _statusBarItem = [bar statusItemWithLength:NSVariableStatusItemLength];
+    [_statusBarItem retain];
+	
+	[_statusBarItem setTitle: NSLocalizedString(@"Bunt",@"")];
+    [_statusBarItem setHighlightMode:YES];
+    [_statusBarItem setMenu:_statusMenu];
+	
+	NSString *lastUsedToolbarItem = [[NSUserDefaults standardUserDefaults] objectForKey:buntLastUsedToolbarItem];
+	if (!lastUsedToolbarItem || ![lastUsedToolbarItem length]) {
+		lastUsedToolbarItem = nscolorIdentifier;
+	}
+	
+	[toolbar setSelectedItemIdentifier:lastUsedToolbarItem];
+	[self setContentViewWithIdentifier:lastUsedToolbarItem];
 	[self changeColorAction:_colorWell];
+	
+	NSScreen *mainScreen = [NSScreen mainScreen];
+	NSRect screenFrame = [mainScreen visibleFrame];
+	CGFloat x = NSMaxX(screenFrame) - [[self window] frame].size.width - 10;
+	CGFloat y = NSMaxY(screenFrame) - 20;
+	[[self window] setFrameTopLeftPoint:NSMakePoint(x, y)];
+	[[self window] setDelegate:self];
 }
 - (NSColor *)currentColor
 {
@@ -54,6 +76,29 @@ static NSString *glcolorIdentifier = @"GLColor";
 
 #pragma mark Interface Builder Actions.
 
+- (void)setContentViewWithIdentifier:(NSString *)identifier
+{
+	NSView *view = nil;
+	if ([identifier isEqualToString:nscolorIdentifier]) {
+		view = [_nsColorController view];
+	}
+	else if ([identifier isEqualToString:uicolorIdentifier]) {
+		view = [_uiColorController view];
+	}
+	else if ([identifier isEqualToString:cgcolorIdentifier]) {
+		view = [_cgColorController view];
+	}
+	else if ([identifier isEqualToString:glcolorIdentifier]) {
+		view = [_glColorController view];
+	}
+	
+	if (view) {
+		[[NSUserDefaults standardUserDefaults] setObject:identifier forKey:buntLastUsedToolbarItem];		
+		[[NSUserDefaults standardUserDefaults] synchronize];
+		
+		[self setContentViewWithView:view];
+	}
+}
 - (void)setContentViewWithView:(NSView *)view
 {
 	NSArray *array = [NSArray arrayWithArray:[[[self window] contentView] subviews]];
@@ -73,28 +118,11 @@ static NSString *glcolorIdentifier = @"GLColor";
 }
 - (IBAction)toggleViewAction:(id)sender
 {
-	NSView *view = nil;
 	NSString *identifier = [(NSToolbarItem *)sender itemIdentifier];
-	if ([identifier isEqualToString:nscolorIdentifier]) {
-		view = [_nsColorController view];
-	}
-	else if ([identifier isEqualToString:uicolorIdentifier]) {
-		view = [_uiColorController view];
-	}
-	else if ([identifier isEqualToString:cgcolorIdentifier]) {
-		view = [_cgColorController view];
-	}
-	else if ([identifier isEqualToString:glcolorIdentifier]) {
-		view = [_glColorController view];
-	}
-	
-	if (view) {
-		[self setContentViewWithView:view];
-	}	
+	[self setContentViewWithIdentifier:identifier];
 }
 - (IBAction)changeColorAction:(id)sender
 {
-	NSLog(@"change color");
 	NSColor *color = [(NSColorWell *)sender color];
 	[_nsColorController updateWithColor:color];
 	[_uiColorController updateWithColor:color];
@@ -103,7 +131,13 @@ static NSString *glcolorIdentifier = @"GLColor";
 }
 
 #pragma mark -
-#pragma mark NSToolbarDelegate Methods.
+#pragma mark NSWindow Delegate Methods.
+- (void)windowWillClose:(NSNotification *)notification
+{
+	[[NSColorPanel sharedColorPanel] orderOut:self];
+}
+
+#pragma mark NSToolbar Delegate Methods.
 
 - (NSToolbarItem *)toolbar:(NSToolbar *)toolbar itemForItemIdentifier:(NSString *)itemIdentifier willBeInsertedIntoToolbar:(BOOL)flag
 {

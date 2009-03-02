@@ -12,17 +12,23 @@
 #import "ZBCGColorViewController.h"
 #import "ZBGLColorViewController.h"
 
+#define buntLastUsedToolbarItem @"buntLastUsedToolbarItem"
+
 @interface ZBMainWindowController : NSWindowController 
 {
 	IBOutlet NSColorWell *_colorWell;
+	IBOutlet NSMenu *_statusMenu;
 	
 	ZBNSColorViewController *_nsColorController;
 	ZBUIColorViewController *_uiColorController;
 	ZBCGColorViewController *_cgColorController;
 	ZBGLColorViewController *_glColorController;
+	
+	NSStatusItem *_statusBarItem;
 }
 
 - (NSColor *)currentColor;
+- (void)setContentViewWithIdentifier:(NSString *)identifier;
 - (void)setContentViewWithView:(NSView *)view;
 
 - (IBAction)toggleViewAction:(id)sender;
