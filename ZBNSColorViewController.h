@@ -11,7 +11,10 @@
 
 @interface ZBNSColorViewController : ZBViewController 
 {
-
+	IBOutlet NSMatrix *_matrix;
+	IBOutlet ZBSourceCodeView *_hsbView;
+	IBOutlet ZBSourceCodeView *_rgbView;
+	IBOutlet ZBSourceCodeView *_cmykView;	
 }
 
 @end

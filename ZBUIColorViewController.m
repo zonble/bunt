@@ -17,6 +17,10 @@
 	BOOL loaded = [NSBundle loadNibNamed:@"ZBUIColorViewController" owner:self];
 	NSAssert((loaded == YES), @"NIB did not load");	
 }
+- (void)updateWithColor:(NSColor *)color
+{
+	[super updateWithColor:color];
+}
 
 
 @end

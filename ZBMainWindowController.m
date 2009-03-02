@@ -45,11 +45,15 @@ static NSString *glcolorIdentifier = @"GLColor";
 	
 	[toolbar setSelectedItemIdentifier:nscolorIdentifier];
 	[self setContentViewWithView:[_nsColorController view]];
+	[self changeColorAction:_colorWell];
 }
 - (NSColor *)currentColor
 {
 	return [_colorWell color];
 }
+
+#pragma mark Interface Builder Actions.
+
 - (void)setContentViewWithView:(NSView *)view
 {
 	NSArray *array = [NSArray arrayWithArray:[[[self window] contentView] subviews]];
@@ -88,8 +92,19 @@ static NSString *glcolorIdentifier = @"GLColor";
 		[self setContentViewWithView:view];
 	}	
 }
+- (IBAction)changeColorAction:(id)sender
+{
+	NSLog(@"change color");
+	NSColor *color = [(NSColorWell *)sender color];
+//	color = [NSColor colorUsingColorSpaceName:NSCalibratedRGBColorSpace];
+	[_nsColorController updateWithColor:color];
+	[_uiColorController updateWithColor:color];
+	[_cgColorController updateWithColor:color];
+	[_glColorController updateWithColor:color];
+}
 
 #pragma mark -
+#pragma mark NSToolbarDelegate Methods.
 
 - (NSToolbarItem *)toolbar:(NSToolbar *)toolbar itemForItemIdentifier:(NSString *)itemIdentifier willBeInsertedIntoToolbar:(BOOL)flag
 {

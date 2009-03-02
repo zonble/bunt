@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "ZBSourceCodeView.h"
 
 @interface ZBViewController : NSObject 
 {
@@ -14,6 +15,7 @@
 }
 
 - (void)loadNib;
+- (void)updateWithColor:(NSColor *)color;
 - (NSView *)view;
 
 @end

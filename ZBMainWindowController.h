@@ -24,6 +24,8 @@
 
 - (NSColor *)currentColor;
 - (void)setContentViewWithView:(NSView *)view;
+
 - (IBAction)toggleViewAction:(id)sender;
+- (IBAction)changeColorAction:(id)sender;
 
 @end

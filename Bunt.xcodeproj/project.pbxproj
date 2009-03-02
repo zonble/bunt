@@ -21,6 +21,7 @@
 		D43E2CAC0F5C4CE9002C282A /* ZBCGColorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D43E2CAB0F5C4CE9002C282A /* ZBCGColorViewController.xib */; };
 		D43E2CB90F5C4D52002C282A /* ZBGLColorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D43E2CB80F5C4D52002C282A /* ZBGLColorViewController.m */; };
 		D43E2CBF0F5C4D8C002C282A /* ZBGLColorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D43E2CBE0F5C4D8C002C282A /* ZBGLColorViewController.xib */; };
+		D4FFBA720F5C5A5100B34E9C /* ZBSourceCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = D4FFBA710F5C5A5100B34E9C /* ZBSourceCodeView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,8 @@
 		D43E2CB70F5C4D52002C282A /* ZBGLColorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBGLColorViewController.h; sourceTree = "<group>"; };
 		D43E2CB80F5C4D52002C282A /* ZBGLColorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBGLColorViewController.m; sourceTree = "<group>"; };
 		D43E2CBC0F5C4D88002C282A /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/ZBGLColorViewController.xib; sourceTree = "<group>"; };
+		D4FFBA700F5C5A5100B34E9C /* ZBSourceCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBSourceCodeView.h; sourceTree = "<group>"; };
+		D4FFBA710F5C5A5100B34E9C /* ZBSourceCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBSourceCodeView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +82,8 @@
 				D43E2CA50F5C4CC3002C282A /* ZBCGColorViewController.m */,
 				D43E2CB70F5C4D52002C282A /* ZBGLColorViewController.h */,
 				D43E2CB80F5C4D52002C282A /* ZBGLColorViewController.m */,
+				D4FFBA700F5C5A5100B34E9C /* ZBSourceCodeView.h */,
+				D4FFBA710F5C5A5100B34E9C /* ZBSourceCodeView.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -219,6 +224,7 @@
 				D43E2C9A0F5C4C68002C282A /* ZBUIColorViewController.m in Sources */,
 				D43E2CA60F5C4CC3002C282A /* ZBCGColorViewController.m in Sources */,
 				D43E2CB90F5C4D52002C282A /* ZBGLColorViewController.m in Sources */,
+				D4FFBA720F5C5A5100B34E9C /* ZBSourceCodeView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

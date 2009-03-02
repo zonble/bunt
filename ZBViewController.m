@@ -21,7 +21,9 @@
 }
 - (void)loadNib
 {
-	
+}
+- (void)updateWithColor:(NSColor *)color
+{
 }
 - (NSView *)view
 {
