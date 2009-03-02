@@ -11,7 +11,10 @@
 
 @interface ZBGLColorViewController : ZBViewController 
 {
-
+	IBOutlet ZBSourceCodeView *_glColor3fView;
+	IBOutlet ZBSourceCodeView *_glColor3fvView;	
+	IBOutlet ZBSourceCodeView *_glColor4fView;
+	IBOutlet ZBSourceCodeView *_glColor4fvView;		
 }
 
 @end
