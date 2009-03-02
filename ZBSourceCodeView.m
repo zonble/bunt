@@ -40,7 +40,7 @@
 	[_titleLabel setBordered:NO];
 	[self addSubview:_titleLabel];
 	
-	_sourceCodeTextField = [[NSTextField alloc] initWithFrame:NSMakeRect(NSMinX([self bounds]), NSMinY([self bounds]), [self bounds].size.width, [self bounds].size.height - 24)];
+	_sourceCodeTextField = [[ZBSourceCodeTextField alloc] initWithFrame:NSMakeRect(NSMinX([self bounds]), NSMinY([self bounds]), [self bounds].size.width, [self bounds].size.height - 24)];
 	[_sourceCodeTextField setEditable:NO];
 	[_sourceCodeTextField setSelectable:YES];
 	[_sourceCodeTextField setFocusRingType:NSFocusRingTypeNone];

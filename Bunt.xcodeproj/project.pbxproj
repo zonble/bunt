@@ -26,6 +26,7 @@
 		D4FFBC380F5C832F00B34E9C /* UIColorItem.png in Resources */ = {isa = PBXBuildFile; fileRef = D4FFBC360F5C832F00B34E9C /* UIColorItem.png */; };
 		D4FFBC520F5C84AE00B34E9C /* GLColorItem.png in Resources */ = {isa = PBXBuildFile; fileRef = D4FFBC510F5C84AE00B34E9C /* GLColorItem.png */; };
 		D4FFBC640F5C867B00B34E9C /* CGColorItem.png in Resources */ = {isa = PBXBuildFile; fileRef = D4FFBC630F5C867B00B34E9C /* CGColorItem.png */; };
+		D4FFBCEE0F5C8FB000B34E9C /* ZBSourceCodeTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = D4FFBCED0F5C8FAF00B34E9C /* ZBSourceCodeTextField.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,8 @@
 		D4FFBC360F5C832F00B34E9C /* UIColorItem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = UIColorItem.png; path = Images/UIColorItem.png; sourceTree = "<group>"; };
 		D4FFBC510F5C84AE00B34E9C /* GLColorItem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GLColorItem.png; path = Images/GLColorItem.png; sourceTree = "<group>"; };
 		D4FFBC630F5C867B00B34E9C /* CGColorItem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CGColorItem.png; path = Images/CGColorItem.png; sourceTree = "<group>"; };
+		D4FFBCEC0F5C8FAF00B34E9C /* ZBSourceCodeTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBSourceCodeTextField.h; sourceTree = "<group>"; };
+		D4FFBCED0F5C8FAF00B34E9C /* ZBSourceCodeTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBSourceCodeTextField.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +95,8 @@
 				D43E2CB80F5C4D52002C282A /* ZBGLColorViewController.m */,
 				D4FFBA700F5C5A5100B34E9C /* ZBSourceCodeView.h */,
 				D4FFBA710F5C5A5100B34E9C /* ZBSourceCodeView.m */,
+				D4FFBCEC0F5C8FAF00B34E9C /* ZBSourceCodeTextField.h */,
+				D4FFBCED0F5C8FAF00B34E9C /* ZBSourceCodeTextField.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -249,6 +254,7 @@
 				D43E2CA60F5C4CC3002C282A /* ZBCGColorViewController.m in Sources */,
 				D43E2CB90F5C4D52002C282A /* ZBGLColorViewController.m in Sources */,
 				D4FFBA720F5C5A5100B34E9C /* ZBSourceCodeView.m in Sources */,
+				D4FFBCEE0F5C8FB000B34E9C /* ZBSourceCodeTextField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

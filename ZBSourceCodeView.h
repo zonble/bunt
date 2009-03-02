@@ -7,13 +7,13 @@
 //
 
 #import <Cocoa/Cocoa.h>
-
+#import "ZBSourceCodeTextField.h"
 
 @interface ZBSourceCodeView : NSView 
 {
 	NSButton *_copyButton;
 	NSTextField *_titleLabel;
-	NSTextField *_sourceCodeTextField;
+	ZBSourceCodeTextField *_sourceCodeTextField;
 }
 
 - (IBAction)copyTextAction:(id)sender;
