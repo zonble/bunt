@@ -33,7 +33,6 @@
 	[self addSubview:_copyButton];
 	
 	_titleLabel = [[NSTextField alloc] initWithFrame:NSMakeRect(NSMinX([self bounds]), NSMaxY([self bounds]) - 19, [self bounds].size.width - 100, 19)];
-//	[_titleLabel setStringValue:@"Title"];
 	[_titleLabel setFont:[NSFont systemFontOfSize:[NSFont systemFontSize]]];
 	[_titleLabel setBackgroundColor:[NSColor controlColor]];
 	[_titleLabel setEditable:NO];
@@ -44,7 +43,6 @@
 	_sourceCodeTextField = [[NSTextField alloc] initWithFrame:NSMakeRect(NSMinX([self bounds]), NSMinY([self bounds]), [self bounds].size.width, [self bounds].size.height - 24)];
 	[_sourceCodeTextField setEditable:NO];
 	[_sourceCodeTextField setSelectable:YES];
-//	[_sourceCodeTextField setStringValue:@"Test"];
 	[_sourceCodeTextField setFocusRingType:NSFocusRingTypeNone];
 	[_sourceCodeTextField setFont:[NSFont systemFontOfSize:10.0]];
 	[_sourceCodeTextField setAutoresizingMask: NSViewWidthSizable | NSViewHeightSizable];
