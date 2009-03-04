@@ -33,5 +33,6 @@
 
 - (IBAction)toggleViewAction:(id)sender;
 - (IBAction)changeColorAction:(id)sender;
+- (IBAction)openHomepageURLAction:(id)sender;
 
 @end

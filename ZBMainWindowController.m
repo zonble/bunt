@@ -129,6 +129,11 @@ static NSString *glcolorIdentifier = @"GLColor";
 	[_cgColorController updateWithColor:color];
 	[_glColorController updateWithColor:color];
 }
+- (IBAction)openHomepageURLAction:(id)sender
+{
+	NSURL *URL = [NSURL URLWithString:@"http://wiki.github.com/zonble/bunt"];
+	[[NSWorkspace sharedWorkspace] openURL:URL];
+}
 
 #pragma mark -
 #pragma mark NSWindow Delegate Methods.
