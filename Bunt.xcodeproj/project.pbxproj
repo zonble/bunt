@@ -325,6 +325,7 @@
 				GCC_PREFIX_HEADER = Bunt_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
 				PRODUCT_NAME = Bunt;
 			};
 			name = Debug;
@@ -339,6 +340,7 @@
 				GCC_PREFIX_HEADER = Bunt_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
 				PRODUCT_NAME = Bunt;
 			};
 			name = Release;
