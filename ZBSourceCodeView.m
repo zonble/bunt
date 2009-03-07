@@ -11,7 +11,7 @@
 
 @implementation ZBSourceCodeView
 
-- (void) dealloc
+- (void)dealloc
 {
 	[_copyButton release];
 	[_titleLabel release];
