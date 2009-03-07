@@ -23,6 +23,9 @@
 		D449EA350F62101F003683D8 /* ZBSourceCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = D449EA2B0F62101F003683D8 /* ZBSourceCodeView.m */; };
 		D449EA360F62101F003683D8 /* ZBUIColorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D449EA2D0F62101F003683D8 /* ZBUIColorViewController.m */; };
 		D449EA370F62101F003683D8 /* ZBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D449EA2F0F62101F003683D8 /* ZBViewController.m */; };
+		D449EA880F629398003683D8 /* Bunt.icns in Resources */ = {isa = PBXBuildFile; fileRef = D449EA870F629398003683D8 /* Bunt.icns */; };
+		D449EA980F6294B7003683D8 /* Bunt32.png in Resources */ = {isa = PBXBuildFile; fileRef = D449EA960F6294B7003683D8 /* Bunt32.png */; };
+		D449EA990F6294B7003683D8 /* Bunt32w.png in Resources */ = {isa = PBXBuildFile; fileRef = D449EA970F6294B7003683D8 /* Bunt32w.png */; };
 		D4FFBC370F5C832F00B34E9C /* NSColorItem.png in Resources */ = {isa = PBXBuildFile; fileRef = D4FFBC350F5C832F00B34E9C /* NSColorItem.png */; };
 		D4FFBC380F5C832F00B34E9C /* UIColorItem.png in Resources */ = {isa = PBXBuildFile; fileRef = D4FFBC360F5C832F00B34E9C /* UIColorItem.png */; };
 		D4FFBC520F5C84AE00B34E9C /* GLColorItem.png in Resources */ = {isa = PBXBuildFile; fileRef = D4FFBC510F5C84AE00B34E9C /* GLColorItem.png */; };
@@ -60,6 +63,9 @@
 		D449EA2D0F62101F003683D8 /* ZBUIColorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZBUIColorViewController.m; path = Classes/ZBUIColorViewController.m; sourceTree = "<group>"; };
 		D449EA2E0F62101F003683D8 /* ZBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZBViewController.h; path = Classes/ZBViewController.h; sourceTree = "<group>"; };
 		D449EA2F0F62101F003683D8 /* ZBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZBViewController.m; path = Classes/ZBViewController.m; sourceTree = "<group>"; };
+		D449EA870F629398003683D8 /* Bunt.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = Bunt.icns; path = Images/Bunt.icns; sourceTree = "<group>"; };
+		D449EA960F6294B7003683D8 /* Bunt32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Bunt32.png; path = Images/Bunt32.png; sourceTree = "<group>"; };
+		D449EA970F6294B7003683D8 /* Bunt32w.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Bunt32w.png; path = Images/Bunt32w.png; sourceTree = "<group>"; };
 		D4FFBC350F5C832F00B34E9C /* NSColorItem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = NSColorItem.png; path = Images/NSColorItem.png; sourceTree = "<group>"; };
 		D4FFBC360F5C832F00B34E9C /* UIColorItem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = UIColorItem.png; path = Images/UIColorItem.png; sourceTree = "<group>"; };
 		D4FFBC510F5C84AE00B34E9C /* GLColorItem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GLColorItem.png; path = Images/GLColorItem.png; sourceTree = "<group>"; };
@@ -81,22 +87,22 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				D449EA200F62101F003683D8 /* ZBCGColorViewController.h */,
-				D449EA210F62101F003683D8 /* ZBCGColorViewController.m */,
-				D449EA220F62101F003683D8 /* ZBGLColorViewController.h */,
-				D449EA230F62101F003683D8 /* ZBGLColorViewController.m */,
 				D449EA240F62101F003683D8 /* ZBMainWindowController.h */,
 				D449EA250F62101F003683D8 /* ZBMainWindowController.m */,
-				D449EA260F62101F003683D8 /* ZBNSColorViewController.h */,
-				D449EA270F62101F003683D8 /* ZBNSColorViewController.m */,
 				D449EA280F62101F003683D8 /* ZBSourceCodeTextField.h */,
 				D449EA290F62101F003683D8 /* ZBSourceCodeTextField.m */,
 				D449EA2A0F62101F003683D8 /* ZBSourceCodeView.h */,
 				D449EA2B0F62101F003683D8 /* ZBSourceCodeView.m */,
-				D449EA2C0F62101F003683D8 /* ZBUIColorViewController.h */,
-				D449EA2D0F62101F003683D8 /* ZBUIColorViewController.m */,
 				D449EA2E0F62101F003683D8 /* ZBViewController.h */,
 				D449EA2F0F62101F003683D8 /* ZBViewController.m */,
+				D449EA260F62101F003683D8 /* ZBNSColorViewController.h */,
+				D449EA270F62101F003683D8 /* ZBNSColorViewController.m */,
+				D449EA2C0F62101F003683D8 /* ZBUIColorViewController.h */,
+				D449EA2D0F62101F003683D8 /* ZBUIColorViewController.m */,
+				D449EA200F62101F003683D8 /* ZBCGColorViewController.h */,
+				D449EA210F62101F003683D8 /* ZBCGColorViewController.m */,
+				D449EA220F62101F003683D8 /* ZBGLColorViewController.h */,
+				D449EA230F62101F003683D8 /* ZBGLColorViewController.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -175,6 +181,9 @@
 		D4FFBC320F5C832700B34E9C /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D449EA960F6294B7003683D8 /* Bunt32.png */,
+				D449EA970F6294B7003683D8 /* Bunt32w.png */,
+				D449EA870F629398003683D8 /* Bunt.icns */,
 				D4FFBC350F5C832F00B34E9C /* NSColorItem.png */,
 				D4FFBC360F5C832F00B34E9C /* UIColorItem.png */,
 				D4FFBC630F5C867B00B34E9C /* CGColorItem.png */,
@@ -236,6 +245,9 @@
 				D4FFBC380F5C832F00B34E9C /* UIColorItem.png in Resources */,
 				D4FFBC520F5C84AE00B34E9C /* GLColorItem.png in Resources */,
 				D4FFBC640F5C867B00B34E9C /* CGColorItem.png in Resources */,
+				D449EA880F629398003683D8 /* Bunt.icns in Resources */,
+				D449EA980F6294B7003683D8 /* Bunt32.png in Resources */,
+				D449EA990F6294B7003683D8 /* Bunt32w.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

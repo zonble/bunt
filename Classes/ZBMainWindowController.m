@@ -49,7 +49,9 @@ static NSString *glcolorIdentifier = @"GLColor";
     _statusBarItem = [bar statusItemWithLength:NSVariableStatusItemLength];
     [_statusBarItem retain];
 	
-	[_statusBarItem setTitle: NSLocalizedString(@"Bunt",@"")];
+//	[_statusBarItem setTitle: NSLocalizedString(@"Bunt",@"")];
+	[_statusBarItem setImage:[NSImage imageNamed:@"Bunt32"]];
+	[_statusBarItem setAlternateImage:[NSImage imageNamed:@"Bunt32w"]];
     [_statusBarItem setHighlightMode:YES];
     [_statusBarItem setMenu:_statusMenu];
 	
