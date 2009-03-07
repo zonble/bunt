@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "ZBSourceCodeView.h"
 
-@interface ZBViewController : NSObject 
+@interface ZBViewController : NSObject
 {
 	IBOutlet NSView *_view;
 }

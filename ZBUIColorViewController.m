@@ -34,7 +34,7 @@
 	[_classHSBView setText:classHSBString];
 	[_classRGBView setText:classRGBString];	
 	[_instanceHSBView setText:instanceHSBString];
-	[_instanceRGBView setText:instanceRGBString];		
+	[_instanceRGBView setText:instanceRGBString];
 }
 
 
