@@ -3,7 +3,6 @@
 //  Bunt
 //
 //  Created by zonble on 2009/3/3.
-//  Copyright 2009 Lithoglyph Inc. All rights reserved.
 //
 
 #import "ZBSourceCodeTextField.h"
@@ -29,13 +28,11 @@
 - (void)mouseDragged:(NSEvent *)theEvent
 {
 	[super mouseDragged:theEvent];
-//	NSLog(@"mouseDragged");
 }
 - (void)mouseUp:(NSEvent *)theEvent
 {
 	[super mouseDown:theEvent];	
 	[super mouseUp:theEvent];
-//	NSLog(@"mouseUp");	
 }
 - (void)mouseDown:(NSEvent *)theEvent
 {

@@ -3,7 +3,6 @@
 //  Bunt
 //
 //  Created by zonble on 2009/3/3.
-//  Copyright 2009 Lithoglyph Inc. All rights reserved.
 //
 
 #import "ZBMainWindowController.h"
@@ -49,7 +48,6 @@ static NSString *glcolorIdentifier = @"GLColor";
     _statusBarItem = [bar statusItemWithLength:NSVariableStatusItemLength];
     [_statusBarItem retain];
 	
-//	[_statusBarItem setTitle: NSLocalizedString(@"Bunt",@"")];
 	[_statusBarItem setImage:[NSImage imageNamed:@"Bunt32"]];
 	[_statusBarItem setAlternateImage:[NSImage imageNamed:@"Bunt32w"]];
     [_statusBarItem setHighlightMode:YES];
@@ -151,7 +149,7 @@ static NSString *glcolorIdentifier = @"GLColor";
 	if ([itemIdentifier isEqualToString:colorWellIdentifier]) {
 		NSToolbarItem *item = [[NSToolbarItem alloc] initWithItemIdentifier:itemIdentifier];
 		[item autorelease];
-		[item setLabel:itemIdentifier];
+		[item setLabel:NSLocalizedString(itemIdentifier, @"")];
 		[item setImage:nil];
 		[item setView:_colorWell];
 		[item setMaxSize:[_colorWell bounds].size];

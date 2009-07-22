@@ -3,7 +3,6 @@
 //  Bunt
 //
 //  Created by zonble on 2009/3/3.
-//  Copyright 2009 Lithoglyph Inc. All rights reserved.
 //
 
 #import "ZBSourceCodeView.h"
@@ -27,7 +26,7 @@
 	[_copyButton setBezelStyle:NSRoundRectBezelStyle];
 	[_copyButton setAutoresizingMask:NSViewMinXMargin];
 	[_copyButton setFont:[NSFont systemFontOfSize:[NSFont labelFontSize]]];
-	[_copyButton setTitle:@"Copy"];
+	[_copyButton setTitle:NSLocalizedString(@"Copy", @"")];
 	[_copyButton setTarget:self];
 	[_copyButton setAction:@selector(copyTextAction:)];
 	[self addSubview:_copyButton];
