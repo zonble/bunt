@@ -67,6 +67,13 @@
 		D449EA870F629398003683D8 /* Bunt.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = Bunt.icns; path = Images/Bunt.icns; sourceTree = "<group>"; };
 		D449EA960F6294B7003683D8 /* Bunt32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Bunt32.png; path = Images/Bunt32.png; sourceTree = "<group>"; };
 		D449EA970F6294B7003683D8 /* Bunt32w.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Bunt32w.png; path = Images/Bunt32w.png; sourceTree = "<group>"; };
+		D46EC90D101BF45F003D31E3 /* zh_CN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_CN; path = zh_CN.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D46EC914101BF48E003D31E3 /* zh_CN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_CN; path = zh_CN.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D46EC919101BF4A1003D31E3 /* zh_CN */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = zh_CN; path = zh_CN.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		D46EC91B101BF4F5003D31E3 /* zh_CN */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = zh_CN; path = zh_CN.lproj/ZBNSColorViewController.xib; sourceTree = "<group>"; };
+		D46EC91E101BF51B003D31E3 /* zh_CN */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = zh_CN; path = zh_CN.lproj/ZBUIColorViewController.xib; sourceTree = "<group>"; };
+		D46EC920101BF544003D31E3 /* zh_CN */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = zh_CN; path = zh_CN.lproj/ZBCGColorViewController.xib; sourceTree = "<group>"; };
+		D46EC922101BF553003D31E3 /* zh_CN */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = zh_CN; path = zh_CN.lproj/ZBGLColorViewController.xib; sourceTree = "<group>"; };
 		D473BF501017DA52008D5AC1 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D473BF631017DAB7008D5AC1 /* zh_TW */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = zh_TW; path = zh_TW.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		D473BF661017DAEC008D5AC1 /* zh_TW */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_TW; path = zh_TW.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -237,6 +244,7 @@
 				French,
 				German,
 				zh_TW,
+				zh_CN,
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* Bunt */;
 			projectDirPath = "";
@@ -296,6 +304,7 @@
 			children = (
 				089C165DFE840E0CC02AAC07 /* English */,
 				D473BF721017DBC2008D5AC1 /* zh_TW */,
+				D46EC914101BF48E003D31E3 /* zh_CN */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -305,6 +314,7 @@
 			children = (
 				1DDD58150DA1D0A300B32029 /* English */,
 				D473BF631017DAB7008D5AC1 /* zh_TW */,
+				D46EC919101BF4A1003D31E3 /* zh_CN */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -314,6 +324,7 @@
 			children = (
 				D43E2C520F5C46D6002C282A /* English */,
 				D473BF691017DB26008D5AC1 /* zh_TW */,
+				D46EC91B101BF4F5003D31E3 /* zh_CN */,
 			);
 			name = ZBNSColorViewController.xib;
 			sourceTree = "<group>";
@@ -323,6 +334,7 @@
 			children = (
 				D43E2C9D0F5C4C88002C282A /* English */,
 				D473BF6C1017DB53008D5AC1 /* zh_TW */,
+				D46EC91E101BF51B003D31E3 /* zh_CN */,
 			);
 			name = ZBUIColorViewController.xib;
 			sourceTree = "<group>";
@@ -332,6 +344,7 @@
 			children = (
 				D43E2CA90F5C4CE5002C282A /* English */,
 				D473BF6F1017DBA8008D5AC1 /* zh_TW */,
+				D46EC920101BF544003D31E3 /* zh_CN */,
 			);
 			name = ZBCGColorViewController.xib;
 			sourceTree = "<group>";
@@ -341,6 +354,7 @@
 			children = (
 				D43E2CBC0F5C4D88002C282A /* English */,
 				D473BF701017DBAE008D5AC1 /* zh_TW */,
+				D46EC922101BF553003D31E3 /* zh_CN */,
 			);
 			name = ZBGLColorViewController.xib;
 			sourceTree = "<group>";
@@ -350,6 +364,7 @@
 			children = (
 				D473BF501017DA52008D5AC1 /* English */,
 				D473BF661017DAEC008D5AC1 /* zh_TW */,
+				D46EC90D101BF45F003D31E3 /* zh_CN */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
