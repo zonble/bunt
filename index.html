@@ -8,27 +8,33 @@
 	<title>zonble/bunt @ GitHub</title>
 	
 	<style type="text/css">
-		body {
-  		margin-top: 1.0em;
-  		background-color: #73efa5;
-		  font-family: "Helvetica,Arial,FreeSans"; 
-  		color: #000000;
-    }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-		h1 { font-size: 3.8em; color: #8c105a; margin-bottom: 3px; }
-		h1 .small { font-size: 0.4em; }
+	body {
+			margin-top: 1.0em;
+			background-color: #FFF;
+			font-family: "helvetica"; 
+			color: #000000;
+			line-height: 1.8em;
+			font-size: 12pt;
+		}
+		#container {
+			margin: 0 auto;
+			width: 700px;
+		}
+		h1 { font-size: 3.8em; color: #000033; margin-bottom: 3px; }
+		h1 .small { font-size: 0.4em; color: #333; }
 		h1 a { text-decoration: none }
-		h2 { font-size: 1.5em; color: #8c105a; }
-    h3 { text-align: center; color: #8c105a; }
-    a { color: #8c105a; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
+		h2 { font-size: 1.5em; color: #000033; }
+		h3 { text-align: center; color: #000033; }
+		a { color: #000033; }
+		.description { font-size: 11pt; margin-bottom: 50px; margin-top: 10px;}
+		.download { float: right; }
 		pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
+		hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+		.footer { text-align:center; padding-top:30px; font-style: italic; }
+		.logo {float: right; margin-left: 30px; margin-bottom: 30px; margin-top: 30px;}
+		div#download {border: 1px solid #666; padding: 20px;}
+		code {font-size: 12px; }
+		p, li {font-size: 11pt; line-height: 1.5em;}
 	</style>
 	
 </head>
@@ -37,6 +43,34 @@
   <a href="http://github.com/zonble/bunt"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
   
   <div id="container">
+	      
+    <h1><a href="http://github.com/zonble/bunt">bunt</a> 
+      <span class="small">by <a href="http://github.com/zonble">zonble</a></span></h1>
+
+    <div class="description">
+		A utility to help Mac/iPhone developers to work with colors.
+    </div>
+
+	<h2>What is Bunt?</h2>
+	
+	The name of Bunt came from a german word which means colorful, and it is an easy-to-use Mac application for Mac/iPhone developers who need to work with colors. After picking a color from the system color picker, it generates source code for you. Bunt supports
+
+	<ul>
+	<li>NSColor - for the Cocoa framework.</li>
+	<li>UIcolor - for the UIKit framework.</li>
+	<li>ColorRef - for Quartz 2D drawing</li>
+	<li>OpenGL - it supports glColor3f(), glColor3fv(), glColor4f() and glColor4fv() functions.</li>
+	</ul>
+
+	<h2>Requirement</h2>
+	<p>Bunt requires</p>
+
+	<ul>
+	<li>An Intel or PPC Macintosh.</li>
+	<li>Mac OS X 10.4 or higher versions.</li>
+	</ul>
+
+    <h2>Download</h2>
 
     <div class="download">
       <a href="http://github.com/zonble/bunt/zipball/master">
@@ -44,21 +78,7 @@
       <a href="http://github.com/zonble/bunt/tarball/master">
         <img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
     </div>
-      
-    <h1><a href="http://github.com/zonble/bunt">bunt</a> 
-      <span class="small">by <a href="http://github.com/zonble">zonble</a></span></h1>
 
-    <div class="description">
-      [Cocoa] A utility to help Mac/iPhone developers to work with colors.
-    </div>
-
-    <h2>Authors</h2>
-<p>zonble (zonble@gmail.com)<br/><br/>      </p>
-<h2>Contact</h2>
-<p>Weizhong Yang (zonble@gmail.com)<br/>      </p>
-
-
-    <h2>Download</h2>
     <p>
       You can download this project in either
       <a href="http://github.com/zonble/bunt/zipball/master">zip</a> or
@@ -68,12 +88,13 @@
       by running:
       <pre>$ git clone git://github.com/zonble/bunt</pre>
     </p>
-      
-    <div class="footer">
-      get the source code on GitHub : <a href="http://github.com/zonble/bunt">zonble/bunt</a>
-    </div>
-    
-  </div>
+
+	<h2>Feedback/Contact</h2>
+	
+	<p>Any suggestion or advice is welcome. Please write to service@zonble.net</p>
+
+
+</div>
 
   
 </body>
