@@ -11,10 +11,6 @@ Welcome to *Bunt*!
 * ColorRef - for Quartz 2D drawing
 * OpenGL - it supports glColor3f(), glColor3fv(), glColor4f() and glColor4fv() functions.
 
-Bunt is developed by [Lithoglyph Inc](http://www.lithoglyph.com) , a software company based in Taipei which is focusing on Mac and iPhone software development.
-
-Lithoglyph develops Mondrianum, a color picker help Mac users to access the online resources of kuler, Adobe Systems' online society to explore and share colors. Lithoglyph also develops TapExpense, an expense tracker for iPhone.
-
 ## Requirement
 
 Bunt requires 
