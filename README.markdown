@@ -1,5 +1,7 @@
 #Bunt
 
+[![Build Status](https://travis-ci.org/zonble/bunt.png?branch=master)](https://travis-ci.org/zonble/bunt)
+
 Welcome to *Bunt*!
 
 ## What is Bunt?
@@ -13,7 +15,7 @@ Welcome to *Bunt*!
 
 ## Requirement
 
-Bunt requires 
+Bunt requires
 
 * An Intel or PPC Macintosh.
 * Mac OS X 10.4 or higher versions.
