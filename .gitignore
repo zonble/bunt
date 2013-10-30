@@ -1,6 +1,15 @@
 build
+build.txt
+home.txt
 *.pbxuser
 *.mode1v3
 *.tm_build_errors
-.DS_Store
+*.wdgtuser
+*.perspectivev3
 *.pyc
+*.xcworkspace
+*.ipa
+*.xls
+*.swp
+xcuserdata
+.DS_Store
