@@ -6,7 +6,9 @@ Welcome to *Bunt*!
 
 ## What is Bunt?
 
-*Bunt* is a german word which means colorful, and it is an easy-to-use Mac application for Mac/iPhone developers who need to work with colors. After picking a color from the system color picker, it generates source code for you. Bunt supports
+*Bunt* is a german word which means colorful, and it is an easy-to-use Mac application for Mac/iPhone developers who need to work with colors. After picking a color from the system color picker, it generates source code for you.
+
+Bunt supports
 
 * NSColor - for the Cocoa framework.
 * UIcolor - for the UIKit framework
@@ -17,12 +19,11 @@ Welcome to *Bunt*!
 
 Bunt requires
 
-* An Intel or PPC Macintosh.
-* Mac OS X 10.4 or higher versions.
+* Mac OS X 10.9
 
 ## Feedback/Contact
 
-Any suggestion or advice is welcome. Please write to zonble@lithoglyph.com
+Any suggestion or advice is welcome. Please write to zonble@gmail.com
 
 ## References
 

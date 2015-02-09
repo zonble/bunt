@@ -164,7 +164,6 @@ static NSString *const settingIdentifier = @"Settings";
 
 	NSToolbarItem *item = [[NSToolbarItem alloc] initWithItemIdentifier:itemIdentifier];
 	[item setLabel:itemIdentifier];
-	[item setImage:nil];
 	[item setTarget:self];
 	[item setAction:@selector(toggleViewAction:)];
 	[item setImage:[NSImage imageNamed:map[itemIdentifier]]];

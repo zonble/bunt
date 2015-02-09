@@ -56,10 +56,24 @@
 	[_colorCreateView setText:createColorString];
 
 	rgbColor = [color colorUsingColorSpaceName:NSCalibratedRGBColorSpace];
-	NSString *cgrgbString = [NSString stringWithFormat:@"CGColorRef color =CGColorCreateGenericRGB(%1.2f, %1.2f, %1.2f, %1.2f);\nCGColorRelease(color);",[rgbColor redComponent], [rgbColor greenComponent], [rgbColor blueComponent], [rgbColor alphaComponent]];
-	[_colorCreateGenericRGBView setText:cgrgbString];
-	NSString *cgcmykString = [NSString stringWithFormat:@"CGColorRef color =CGColorCreateGenericCMYK(%1.2f, %1.2f, %1.2f, %1.2f, %1.2f);\nCGColorRelease(color);", [cmykColor cyanComponent], [cmykColor magentaComponent], [cmykColor yellowComponent], [cmykColor blackComponent], [cmykColor alphaComponent]];
-	[_colorCreateGenericCMYKView setText:cgcmykString];
+
+	if (isSwift) {
+		NSString *cgrgbString = [NSString stringWithFormat:@"var color :CGColorRef = CGColorCreateGenericRGB(%1.2f, %1.2f, %1.2f, %1.2f)",[rgbColor redComponent], [rgbColor greenComponent], [rgbColor blueComponent], [rgbColor alphaComponent]];
+		[_colorCreateGenericRGBView setText:cgrgbString];
+	}
+	else {
+		NSString *cgrgbString = [NSString stringWithFormat:@"CGColorRef color = CGColorCreateGenericRGB(%1.2f, %1.2f, %1.2f, %1.2f);\nCGColorRelease(color);",[rgbColor redComponent], [rgbColor greenComponent], [rgbColor blueComponent], [rgbColor alphaComponent]];
+		[_colorCreateGenericRGBView setText:cgrgbString];
+	}
+
+	if (isSwift) {
+		NSString *cgcmykString = [NSString stringWithFormat:@"var color :CGColorRef = CGColorCreateGenericCMYK(%1.2f, %1.2f, %1.2f, %1.2f, %1.2f);\nCGColorRelease(color);", [cmykColor cyanComponent], [cmykColor magentaComponent], [cmykColor yellowComponent], [cmykColor blackComponent], [cmykColor alphaComponent]];
+		[_colorCreateGenericCMYKView setText:cgcmykString];
+	}
+	else {
+		NSString *cgcmykString = [NSString stringWithFormat:@"CGColorRef color = CGColorCreateGenericCMYK(%1.2f, %1.2f, %1.2f, %1.2f, %1.2f);\nCGColorRelease(color);", [cmykColor cyanComponent], [cmykColor magentaComponent], [cmykColor yellowComponent], [cmykColor blackComponent], [cmykColor alphaComponent]];
+		[_colorCreateGenericCMYKView setText:cgcmykString];
+	}
 }
 
 
