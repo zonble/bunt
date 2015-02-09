@@ -1,8 +1,8 @@
 //
-//  ZBSourceCodeTextField.m
-//  Bunt
+//	ZBSourceCodeTextField.m
+//	Bunt
 //
-//  Created by zonble on 2009/3/3.
+//	Created by zonble on 2009/3/3.
 //
 
 #import "ZBSourceCodeTextField.h"
@@ -13,15 +13,15 @@
 - (NSImage *)textImage
 {
 	NSAttributedString *a = [self attributedStringValue];
-	
+
 	NSRect myRect = [self frame];
 	NSRect imgRect = [a boundingRectWithSize:NSMakeSize(myRect.size.width + 20, 1600) options:NSStringDrawingUsesLineFragmentOrigin];
 	imgRect.size.width = myRect.size.width;
-	NSImage *image = [[[NSImage alloc] initWithSize:imgRect.size] autorelease];
+	NSImage *image = [[NSImage alloc] initWithSize:imgRect.size];
 	[image lockFocus];
 	NSRect rect = NSMakeRect(0, 0, [image size].width, [image size].height);
 	[a drawInRect:rect];
-	[image unlockFocus];	
+	[image unlockFocus];
 	return image;
 }
 
@@ -31,7 +31,7 @@
 }
 - (void)mouseUp:(NSEvent *)theEvent
 {
-	[super mouseDown:theEvent];	
+	[super mouseDown:theEvent];
 	[super mouseUp:theEvent];
 }
 - (void)mouseDown:(NSEvent *)theEvent
@@ -41,14 +41,14 @@
 	NSPasteboard *pasteboard = [NSPasteboard generalPasteboard];
 	NSArray *types = [NSArray arrayWithObjects: NSStringPboardType, nil];
 	NSSize offset = NSMakeSize(0, 0);
-	[pasteboard declareTypes:types owner:self];	
+	[pasteboard declareTypes:types owner:self];
 	[pasteboard setString:[self stringValue] forType:NSStringPboardType];
 	NSAttributedString *attrString = [self attributedStringValue];
 	NSRange wholeStringRange = NSMakeRange(0, [attrString length]);
 	NSData *rtfdData = [attrString RTFDFromRange:wholeStringRange documentAttributes:nil];
 	[pasteboard setData:rtfdData forType:NSRTFDPboardType];
-	
-	
+
+
 	[self dragImage:image at:p offset:offset event:theEvent pasteboard:pasteboard source:self slideBack:YES];
 }
 

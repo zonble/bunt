@@ -1,8 +1,8 @@
 //
-//  ZBNSColorViewController.m
-//  Bunt
+//	ZBNSColorViewController.m
+//	Bunt
 //
-//  Created by zonble on 2009/3/3.
+//	Created by zonble on 2009/3/3.
 //
 
 #import "ZBNSColorViewController.h"
@@ -14,19 +14,19 @@
 {
 	[super loadNib];
 	BOOL loaded = [NSBundle loadNibNamed:@"ZBNSColorViewController" owner:self];
-	NSAssert((loaded == YES), @"NIB did not load");	
-	
+	NSAssert((loaded == YES), @"NIB did not load");
+
 	[_hsbView setTitle:@"HSB"];
 	[_rgbView setTitle:@"RGB"];
-	[_cmykView setTitle:@"CMYK"];	
+	[_cmykView setTitle:@"CMYK"];
 }
 - (void)updateWithColor:(NSColor *)color
 {
 	[super updateWithColor:color];
 	NSInteger tag = [[_matrix selectedCell] tag];
 	NSString *hsbString = nil;
-	NSString *rgbString = nil;	
-	
+	NSString *rgbString = nil;
+
 	if (tag) {
 		// Use Calibrated RGB
 		NSColor *rgbColor = [color colorUsingColorSpaceName:NSCalibratedRGBColorSpace];

@@ -1,14 +1,14 @@
 //
-//  ZBSourceCodeView.h
-//  Bunt
+//	ZBSourceCodeView.h
+//	Bunt
 //
-//  Created by zonble on 2009/3/3.
+//	Created by zonble on 2009/3/3.
 //
 
 #import <Cocoa/Cocoa.h>
 #import "ZBSourceCodeTextField.h"
 
-@interface ZBSourceCodeView : NSView 
+@interface ZBSourceCodeView : NSView
 {
 	NSButton *_copyButton;
 	NSTextField *_titleLabel;

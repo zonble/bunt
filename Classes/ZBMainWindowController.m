@@ -1,8 +1,8 @@
 //
-//  ZBMainWindowController.m
-//  Bunt
+//	ZBMainWindowController.m
+//	Bunt
 //
-//  Created by zonble on 2009/3/3.
+//	Created by zonble on 2009/3/3.
 //
 
 #import "ZBMainWindowController.h"
@@ -15,53 +15,42 @@ static NSString *glcolorIdentifier = @"GLColor";
 
 @implementation ZBMainWindowController
 
-- (void)dealloc
-{
-	[_nsColorController release];
-	[_uiColorController release];
-	[_cgColorController release];
-	[_glColorController release];
-	[_statusBarItem release];
-	[super dealloc];
-}
 
 - (void)awakeFromNib
 {
 	NSLog(@"awakeFromNib");
-	
+
 	_nsColorController = [[ZBNSColorViewController alloc] init];
 	_uiColorController = [[ZBUIColorViewController alloc] init];
 	_cgColorController = [[ZBCGColorViewController alloc] init];
 	_glColorController = [[ZBGLColorViewController alloc] init];
-	
+
 	NSToolbar *toolbar = [[NSToolbar alloc] initWithIdentifier:@"toolbar"];
-	[toolbar autorelease];
 	[toolbar setDelegate:self];
 	[toolbar setVisible:YES];
 	[toolbar setSizeMode:NSToolbarSizeModeRegular];
 	[toolbar setAllowsUserCustomization:NO];
 	[toolbar setAutosavesConfiguration:NO];
 	[[self window] setToolbar:toolbar];
-	
+
 	NSStatusBar *bar = [NSStatusBar systemStatusBar];
-	
-    _statusBarItem = [bar statusItemWithLength:NSVariableStatusItemLength];
-    [_statusBarItem retain];
-	
+
+	_statusBarItem = [bar statusItemWithLength:NSVariableStatusItemLength];
+
 	[_statusBarItem setImage:[NSImage imageNamed:@"Bunt32"]];
 	[_statusBarItem setAlternateImage:[NSImage imageNamed:@"Bunt32w"]];
-    [_statusBarItem setHighlightMode:YES];
-    [_statusBarItem setMenu:_statusMenu];
-	
+	[_statusBarItem setHighlightMode:YES];
+	[_statusBarItem setMenu:_statusMenu];
+
 	NSString *lastUsedToolbarItem = [[NSUserDefaults standardUserDefaults] objectForKey:buntLastUsedToolbarItem];
 	if (!lastUsedToolbarItem || ![lastUsedToolbarItem length]) {
 		lastUsedToolbarItem = nscolorIdentifier;
 	}
-	
+
 	[toolbar setSelectedItemIdentifier:lastUsedToolbarItem];
 	[self setContentViewWithIdentifier:lastUsedToolbarItem];
 	[self changeColorAction:_colorWell];
-	
+
 	NSScreen *mainScreen = [NSScreen mainScreen];
 	NSRect screenFrame = [mainScreen visibleFrame];
 	CGFloat x = NSMaxX(screenFrame) - [[self window] frame].size.width - 10;
@@ -91,11 +80,11 @@ static NSString *glcolorIdentifier = @"GLColor";
 	else if ([identifier isEqualToString:glcolorIdentifier]) {
 		view = [_glColorController view];
 	}
-	
+
 	if (view) {
-		[[NSUserDefaults standardUserDefaults] setObject:identifier forKey:buntLastUsedToolbarItem];		
+		[[NSUserDefaults standardUserDefaults] setObject:identifier forKey:buntLastUsedToolbarItem];
 		[[NSUserDefaults standardUserDefaults] synchronize];
-		
+
 		[self setContentViewWithView:view];
 	}
 }
@@ -148,17 +137,15 @@ static NSString *glcolorIdentifier = @"GLColor";
 {
 	if ([itemIdentifier isEqualToString:colorWellIdentifier]) {
 		NSToolbarItem *item = [[NSToolbarItem alloc] initWithItemIdentifier:itemIdentifier];
-		[item autorelease];
 		[item setLabel:NSLocalizedString(itemIdentifier, @"")];
 		[item setImage:nil];
 		[item setView:_colorWell];
 		[item setMaxSize:[_colorWell bounds].size];
 		[item setMinSize:[_colorWell bounds].size];
 		return item;
-	}	
+	}
 	else if ([itemIdentifier isEqualToString:nscolorIdentifier]) {
 		NSToolbarItem *item = [[NSToolbarItem alloc] initWithItemIdentifier:itemIdentifier];
-		[item autorelease];
 		[item setLabel:itemIdentifier];
 		[item setImage:nil];
 		[item setTarget:self];
@@ -168,7 +155,6 @@ static NSString *glcolorIdentifier = @"GLColor";
 	}
 	else if ([itemIdentifier isEqualToString:uicolorIdentifier]) {
 		NSToolbarItem *item = [[NSToolbarItem alloc] initWithItemIdentifier:itemIdentifier];
-		[item autorelease];
 		[item setLabel:itemIdentifier];
 		[item setImage:nil];
 		[item setTarget:self];
@@ -178,7 +164,6 @@ static NSString *glcolorIdentifier = @"GLColor";
 	}
 	else if ([itemIdentifier isEqualToString:cgcolorIdentifier]) {
 		NSToolbarItem *item = [[NSToolbarItem alloc] initWithItemIdentifier:itemIdentifier];
-		[item autorelease];
 		[item setLabel:itemIdentifier];
 		[item setImage:nil];
 		[item setTarget:self];
@@ -188,7 +173,6 @@ static NSString *glcolorIdentifier = @"GLColor";
 	}
 	else if ([itemIdentifier isEqualToString:glcolorIdentifier]) {
 		NSToolbarItem *item = [[NSToolbarItem alloc] initWithItemIdentifier:itemIdentifier];
-		[item autorelease];
 		[item setLabel:itemIdentifier];
 		[item setImage:nil];
 		[item setTarget:self];
@@ -196,8 +180,8 @@ static NSString *glcolorIdentifier = @"GLColor";
 		[item setImage:[NSImage imageNamed:@"GLColorItem"]];
 		return item;
 	}
-	
-	return nil;	
+
+	return nil;
 }
 
 - (NSArray *)toolbarAllowedItemIdentifiers:(NSToolbar *)toolbar
@@ -207,7 +191,7 @@ static NSString *glcolorIdentifier = @"GLColor";
 
 - (NSArray *)toolbarDefaultItemIdentifiers:(NSToolbar *)toolbar
 {
-	return [NSArray arrayWithObjects:colorWellIdentifier, NSToolbarSeparatorItemIdentifier, NSToolbarFlexibleSpaceItemIdentifier, nscolorIdentifier, uicolorIdentifier, cgcolorIdentifier, glcolorIdentifier, nil];	
+	return [NSArray arrayWithObjects:colorWellIdentifier, NSToolbarSeparatorItemIdentifier, NSToolbarFlexibleSpaceItemIdentifier, nscolorIdentifier, uicolorIdentifier, cgcolorIdentifier, glcolorIdentifier, nil];
 }
 
 - (NSArray *)toolbarSelectableItemIdentifiers:(NSToolbar *)toolbar

@@ -1,8 +1,8 @@
 //
-//  ZBCGColorViewController.h
-//  Bunt
+//	ZBCGColorViewController.h
+//	Bunt
 //
-//  Created by zonble on 2009/3/3.
+//	Created by zonble on 2009/3/3.
 //
 
 #import <Cocoa/Cocoa.h>
@@ -11,8 +11,8 @@
 @interface ZBCGColorViewController : ZBViewController
 {
 	IBOutlet ZBSourceCodeView *_colorCreateView;
-	IBOutlet ZBSourceCodeView *_colorCreateGenericRGBView;	
-	IBOutlet ZBSourceCodeView *_colorCreateGenericCMYKView;	
+	IBOutlet ZBSourceCodeView *_colorCreateGenericRGBView;
+	IBOutlet ZBSourceCodeView *_colorCreateGenericCMYKView;
 	IBOutlet NSMatrix *_matrix;
 }
 

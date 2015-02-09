@@ -1,8 +1,8 @@
 //
-//  ZBGLColorViewController.m
-//  Bunt
+//	ZBGLColorViewController.m
+//	Bunt
 //
-//  Created by zonble on 2009/3/3.
+//	Created by zonble on 2009/3/3.
 //
 
 #import "ZBGLColorViewController.h"
@@ -14,11 +14,11 @@
 {
 	[super loadNib];
 	BOOL loaded = [NSBundle loadNibNamed:@"ZBGLColorViewController" owner:self];
-	NSAssert((loaded == YES), @"NIB did not load");	
+	NSAssert((loaded == YES), @"NIB did not load");
 	[_glColor3fView setTitle:@"glColor3f"];
-	[_glColor3fvView setTitle:@"glColor3fv"];	
+	[_glColor3fvView setTitle:@"glColor3fv"];
 	[_glColor4fView setTitle:@"glColor4f"];
-	[_glColor4fvView setTitle:@"glColor4fv"];	
+	[_glColor4fvView setTitle:@"glColor4fv"];
 }
 - (void)updateWithColor:(NSColor *)color
 {
@@ -30,6 +30,5 @@
 	[_glColor4fvView setText:[NSString stringWithFormat:@"glFloat color[4] = {%1.2f, %1.2f, %1.2f, %1.2f};\nglColor4fv(color);", [rgbColor redComponent], [rgbColor greenComponent], [rgbColor blueComponent], [rgbColor alphaComponent]]];
 
 }
-
 
 @end

@@ -26,16 +26,16 @@
     @discussion  The main controller class of the Bunt project.
 */
 
-@interface ZBMainWindowController : NSWindowController 
+@interface ZBMainWindowController : NSWindowController
 {
 	IBOutlet NSColorWell *_colorWell;
 	IBOutlet NSMenu *_statusMenu;
-	
+
 	ZBNSColorViewController *_nsColorController;
 	ZBUIColorViewController *_uiColorController;
 	ZBCGColorViewController *_cgColorController;
 	ZBGLColorViewController *_glColorController;
-	
+
 	NSStatusItem *_statusBarItem;
 }
 
@@ -46,7 +46,7 @@
 - (NSColor *)currentColor;
 /*!
     @method     setContentViewWithIdentifier:
-    @abstract   Sets the content of the main window with a specific view 
+    @abstract   Sets the content of the main window with a specific view
 				by specifying an identifier.
 */
 - (void)setContentViewWithIdentifier:(NSString *)identifier;
@@ -60,4 +60,9 @@
 - (IBAction)changeColorAction:(id)sender;
 - (IBAction)openHomepageURLAction:(id)sender;
 
+
+//@property (strong, nonatomic) ZBNSColorViewController *nsColorController;
+//@property (strong, nonatomic) ZBUIColorViewController *uiColorController;
+//@property (strong, nonatomic) ZBCGColorViewController *cgColorController;
+//@property (strong, nonatomic) ZBGLColorViewController *glColorController;
 @end

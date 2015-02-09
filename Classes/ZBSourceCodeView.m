@@ -1,8 +1,8 @@
 //
-//  ZBSourceCodeView.m
-//  Bunt
+//	ZBSourceCodeView.m
+//	Bunt
 //
-//  Created by zonble on 2009/3/3.
+//	Created by zonble on 2009/3/3.
 //
 
 #import "ZBSourceCodeView.h"
@@ -10,13 +10,6 @@
 
 @implementation ZBSourceCodeView
 
-- (void)dealloc
-{
-	[_copyButton release];
-	[_titleLabel release];
-	[_sourceCodeTextField release];
-	[super dealloc];
-}
 
 - (void)_init
 {
@@ -30,7 +23,7 @@
 	[_copyButton setTarget:self];
 	[_copyButton setAction:@selector(copyTextAction:)];
 	[self addSubview:_copyButton];
-	
+
 	_titleLabel = [[NSTextField alloc] initWithFrame:NSMakeRect(NSMinX([self bounds]), NSMaxY([self bounds]) - 19, [self bounds].size.width - 100, 19)];
 	[_titleLabel setFont:[NSFont systemFontOfSize:[NSFont systemFontSize]]];
 	[_titleLabel setBackgroundColor:[NSColor controlColor]];
@@ -38,7 +31,7 @@
 	[_titleLabel setBezeled:NO];
 	[_titleLabel setBordered:NO];
 	[self addSubview:_titleLabel];
-	
+
 	_sourceCodeTextField = [[ZBSourceCodeTextField alloc] initWithFrame:NSMakeRect(NSMinX([self bounds]), NSMinY([self bounds]), [self bounds].size.width, [self bounds].size.height - 24)];
 	[_sourceCodeTextField setEditable:NO];
 	[_sourceCodeTextField setSelectable:YES];
@@ -49,20 +42,20 @@
 }
 - (id)initWithCoder:aDecoder
 {
-    self = [super initWithCoder:aDecoder];
-    if (self) {
+	self = [super initWithCoder:aDecoder];
+	if (self) {
 		[self _init];
-    }
-    return self;
+	}
+	return self;
 }
 
-- (id)initWithFrame:(NSRect)frame 
+- (id)initWithFrame:(NSRect)frame
 {
-    self = [super initWithFrame:frame];
-    if (self) {
+	self = [super initWithFrame:frame];
+	if (self) {
 		[self _init];
-    }
-    return self;
+	}
+	return self;
 }
 
 - (void)setTitle:(NSString *)title
