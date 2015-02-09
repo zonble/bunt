@@ -10,7 +10,7 @@
 
 @implementation ZBViewController
 
-- (id)init
+- (instancetype)init
 {
 	self = [super init];
 	if (self != nil) {
@@ -18,15 +18,13 @@
 	}
 	return self;
 }
+
 - (void)loadNib
 {
 }
+
 - (void)updateWithColor:(NSColor *)color
 {
-}
-- (NSView *)view
-{
-	return _view;
 }
 
 @end

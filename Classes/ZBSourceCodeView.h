@@ -9,13 +9,8 @@
 #import "ZBSourceCodeTextField.h"
 
 @interface ZBSourceCodeView : NSView
-{
-	NSButton *_copyButton;
-	NSTextField *_titleLabel;
-	ZBSourceCodeTextField *_sourceCodeTextField;
-}
-
 - (IBAction)copyTextAction:(id)sender;
 - (void)setTitle:(NSString *)title;
 - (void)setText:(NSString *)text;
+
 @end

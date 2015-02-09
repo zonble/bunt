@@ -9,12 +9,9 @@
 #import "ZBSourceCodeView.h"
 
 @interface ZBViewController : NSObject
-{
-	IBOutlet NSView *_view;
-}
 
 - (void)loadNib;
 - (void)updateWithColor:(NSColor *)color;
-- (NSView *)view;
 
+@property (strong, nonatomic) IBOutlet NSView *view;
 @end

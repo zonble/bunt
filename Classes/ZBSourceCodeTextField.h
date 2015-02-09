@@ -7,10 +7,5 @@
 
 #import <Cocoa/Cocoa.h>
 
-
 @interface ZBSourceCodeTextField : NSTextField
-{
-
-}
-
 @end

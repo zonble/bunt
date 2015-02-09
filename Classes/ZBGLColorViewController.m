@@ -7,6 +7,12 @@
 
 #import "ZBGLColorViewController.h"
 
+@interface ZBGLColorViewController ()
+@property (weak, nonatomic) IBOutlet ZBSourceCodeView *glColor3fView;
+@property (weak, nonatomic) IBOutlet ZBSourceCodeView *glColor3fvView;
+@property (weak, nonatomic) IBOutlet ZBSourceCodeView *glColor4fView;
+@property (weak, nonatomic) IBOutlet ZBSourceCodeView *glColor4fvView;
+@end
 
 @implementation ZBGLColorViewController
 

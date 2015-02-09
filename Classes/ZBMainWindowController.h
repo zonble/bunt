@@ -6,10 +6,6 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "ZBNSColorViewController.h"
-#import "ZBUIColorViewController.h"
-#import "ZBCGColorViewController.h"
-#import "ZBGLColorViewController.h"
 
 #define buntLastUsedToolbarItem @"buntLastUsedToolbarItem"
 
@@ -31,11 +27,6 @@
 	IBOutlet NSColorWell *_colorWell;
 	IBOutlet NSMenu *_statusMenu;
 
-	ZBNSColorViewController *_nsColorController;
-	ZBUIColorViewController *_uiColorController;
-	ZBCGColorViewController *_cgColorController;
-	ZBGLColorViewController *_glColorController;
-
 	NSStatusItem *_statusBarItem;
 }
 
@@ -43,7 +34,7 @@
     @method     currentColor
     @abstract   The NSColor object of the color in the color well.
 */
-- (NSColor *)currentColor;
+@property (NS_NONATOMIC_IOSONLY, readonly, copy) NSColor *currentColor;
 /*!
     @method     setContentViewWithIdentifier:
     @abstract   Sets the content of the main window with a specific view
@@ -60,9 +51,4 @@
 - (IBAction)changeColorAction:(id)sender;
 - (IBAction)openHomepageURLAction:(id)sender;
 
-
-//@property (strong, nonatomic) ZBNSColorViewController *nsColorController;
-//@property (strong, nonatomic) ZBUIColorViewController *uiColorController;
-//@property (strong, nonatomic) ZBCGColorViewController *cgColorController;
-//@property (strong, nonatomic) ZBGLColorViewController *glColorController;
 @end

@@ -7,22 +7,26 @@
 
 #import "ZBSourceCodeView.h"
 
+@interface ZBSourceCodeView ()
+@property (strong, nonatomic) NSButton *doCopyButton;
+@property (strong, nonatomic) NSTextField *titleLabel;
+@property (strong, nonatomic) ZBSourceCodeTextField *sourceCodeTextField;
+@end
 
 @implementation ZBSourceCodeView
-
 
 - (void)_init
 {
 	[self setAutoresizingMask: NSViewWidthSizable];
-	_copyButton = [[NSButton alloc] initWithFrame:NSMakeRect(NSMaxX([self bounds]) - 70, NSMaxY([self bounds]) - 20, 70, 19)];
-	[_copyButton setButtonType:NSMomentaryLightButton];
-	[_copyButton setBezelStyle:NSRoundRectBezelStyle];
-	[_copyButton setAutoresizingMask:NSViewMinXMargin];
-	[_copyButton setFont:[NSFont systemFontOfSize:[NSFont labelFontSize]]];
-	[_copyButton setTitle:NSLocalizedString(@"Copy", @"")];
-	[_copyButton setTarget:self];
-	[_copyButton setAction:@selector(copyTextAction:)];
-	[self addSubview:_copyButton];
+	_doCopyButton = [[NSButton alloc] initWithFrame:NSMakeRect(NSMaxX([self bounds]) - 70, NSMaxY([self bounds]) - 20, 70, 19)];
+	[_doCopyButton setButtonType:NSMomentaryLightButton];
+	[_doCopyButton setBezelStyle:NSRoundRectBezelStyle];
+	[_doCopyButton setAutoresizingMask:NSViewMinXMargin];
+	[_doCopyButton setFont:[NSFont systemFontOfSize:[NSFont labelFontSize]]];
+	[_doCopyButton setTitle:NSLocalizedString(@"Copy", @"")];
+	[_doCopyButton setTarget:self];
+	[_doCopyButton setAction:@selector(copyTextAction:)];
+	[self addSubview:_doCopyButton];
 
 	_titleLabel = [[NSTextField alloc] initWithFrame:NSMakeRect(NSMinX([self bounds]), NSMaxY([self bounds]) - 19, [self bounds].size.width - 100, 19)];
 	[_titleLabel setFont:[NSFont systemFontOfSize:[NSFont systemFontSize]]];
@@ -40,7 +44,8 @@
 	[_sourceCodeTextField setAutoresizingMask: NSViewWidthSizable | NSViewHeightSizable];
 	[self addSubview:_sourceCodeTextField];
 }
-- (id)initWithCoder:aDecoder
+
+- (instancetype)initWithCoder:aDecoder
 {
 	self = [super initWithCoder:aDecoder];
 	if (self) {
@@ -49,7 +54,7 @@
 	return self;
 }
 
-- (id)initWithFrame:(NSRect)frame
+- (instancetype)initWithFrame:(NSRect)frame
 {
 	self = [super initWithFrame:frame];
 	if (self) {
@@ -62,6 +67,7 @@
 {
 	[_titleLabel setStringValue:title];
 }
+
 - (void)setText:(NSString *)text
 {
 	[_sourceCodeTextField setStringValue:text];
@@ -70,7 +76,7 @@
 - (IBAction)copyTextAction:(id)sender
 {
 	NSPasteboard *pasteboard = [NSPasteboard generalPasteboard];
-	NSArray *types = [NSArray arrayWithObjects: NSStringPboardType, NSRTFPboardType, nil];
+	NSArray *types = @[NSStringPboardType, NSRTFPboardType];
 	[pasteboard declareTypes:types owner:self];
 	[pasteboard setString:[_sourceCodeTextField stringValue] forType:NSStringPboardType];
 	NSAttributedString *attrString = [_sourceCodeTextField attributedStringValue];
@@ -78,4 +84,5 @@
 	NSData *rtfdData = [attrString RTFDFromRange:wholeStringRange documentAttributes:nil];
 	[pasteboard setData:rtfdData forType:NSRTFDPboardType];
 }
+
 @end

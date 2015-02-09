@@ -7,6 +7,12 @@
 
 #import "ZBUIColorViewController.h"
 
+@interface ZBUIColorViewController()
+@property (weak, nonatomic) IBOutlet ZBSourceCodeView *classHSBView;
+@property (weak, nonatomic) IBOutlet ZBSourceCodeView *classRGBView;
+@property (weak, nonatomic) IBOutlet ZBSourceCodeView *instanceHSBView;
+@property (weak, nonatomic) IBOutlet ZBSourceCodeView *instanceRGBView;
+@end
 
 @implementation ZBUIColorViewController
 
@@ -20,6 +26,7 @@
 	[_instanceHSBView setTitle:@"HSB"];
 	[_instanceRGBView setTitle:@"RGB"];
 }
+
 - (void)updateWithColor:(NSColor *)color
 {
 	[super updateWithColor:color];
@@ -35,6 +42,5 @@
 	[_instanceHSBView setText:instanceHSBString];
 	[_instanceRGBView setText:instanceRGBString];
 }
-
 
 @end

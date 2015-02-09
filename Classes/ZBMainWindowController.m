@@ -6,20 +6,34 @@
 //
 
 #import "ZBMainWindowController.h"
+#import "ZBNSColorViewController.h"
+#import "ZBUIColorViewController.h"
+#import "ZBCGColorViewController.h"
+#import "ZBGLColorViewController.h"
 
-static NSString *colorWellIdentifier = @"Color Well";
-static NSString *nscolorIdentifier = @"NSColor";
-static NSString *uicolorIdentifier = @"UIColor";
-static NSString *cgcolorIdentifier = @"CGColor";
-static NSString *glcolorIdentifier = @"GLColor";
+static NSString *const colorWellIdentifier = @"Color Well";
+static NSString *const nscolorIdentifier = @"NSColor";
+static NSString *const uicolorIdentifier = @"UIColor";
+static NSString *const cgcolorIdentifier = @"CGColor";
+static NSString *const glcolorIdentifier = @"GLColor";
+
+@interface ZBMainWindowController ()
+@property (strong, nonatomic) ZBNSColorViewController *nsColorController;
+@property (strong, nonatomic) ZBUIColorViewController *uiColorController;
+@property (strong, nonatomic) ZBCGColorViewController *cgColorController;
+@property (strong, nonatomic) ZBGLColorViewController *glColorController;
+@end
+
+@interface ZBMainWindowController (Toolbar) <NSToolbarDelegate>
+@end
+
+@interface ZBMainWindowController (Window) <NSWindowDelegate>
+@end
 
 @implementation ZBMainWindowController
 
-
 - (void)awakeFromNib
 {
-	NSLog(@"awakeFromNib");
-
 	_nsColorController = [[ZBNSColorViewController alloc] init];
 	_uiColorController = [[ZBUIColorViewController alloc] init];
 	_cgColorController = [[ZBCGColorViewController alloc] init];
@@ -67,24 +81,16 @@ static NSString *glcolorIdentifier = @"GLColor";
 
 - (void)setContentViewWithIdentifier:(NSString *)identifier
 {
-	NSView *view = nil;
-	if ([identifier isEqualToString:nscolorIdentifier]) {
-		view = [_nsColorController view];
-	}
-	else if ([identifier isEqualToString:uicolorIdentifier]) {
-		view = [_uiColorController view];
-	}
-	else if ([identifier isEqualToString:cgcolorIdentifier]) {
-		view = [_cgColorController view];
-	}
-	else if ([identifier isEqualToString:glcolorIdentifier]) {
-		view = [_glColorController view];
-	}
+	NSDictionary *map = @{
+	  nscolorIdentifier: _nsColorController,
+	  uicolorIdentifier: _uiColorController,
+	  cgcolorIdentifier: _cgColorController,
+	  glcolorIdentifier: _glColorController};
+	NSView *view = [map[identifier] view];
 
 	if (view) {
 		[[NSUserDefaults standardUserDefaults] setObject:identifier forKey:buntLastUsedToolbarItem];
 		[[NSUserDefaults standardUserDefaults] synchronize];
-
 		[self setContentViewWithView:view];
 	}
 }
@@ -113,10 +119,10 @@ static NSString *glcolorIdentifier = @"GLColor";
 - (IBAction)changeColorAction:(id)sender
 {
 	NSColor *color = [(NSColorWell *)sender color];
-	[_nsColorController updateWithColor:color];
-	[_uiColorController updateWithColor:color];
-	[_cgColorController updateWithColor:color];
-	[_glColorController updateWithColor:color];
+
+	for (ZBViewController *controller in @[_nsColorController, _uiColorController, _cgColorController, _glColorController]) {
+		[controller updateWithColor:color];
+	}
 }
 - (IBAction)openHomepageURLAction:(id)sender
 {
@@ -124,14 +130,10 @@ static NSString *glcolorIdentifier = @"GLColor";
 	[[NSWorkspace sharedWorkspace] openURL:URL];
 }
 
-#pragma mark -
-#pragma mark NSWindow Delegate Methods.
-- (void)windowWillClose:(NSNotification *)notification
-{
-	[[NSColorPanel sharedColorPanel] orderOut:self];
-}
+@end
 
-#pragma mark NSToolbar Delegate Methods.
+@implementation ZBMainWindowController (Toolbar)
+
 
 - (NSToolbarItem *)toolbar:(NSToolbar *)toolbar itemForItemIdentifier:(NSString *)itemIdentifier willBeInsertedIntoToolbar:(BOOL)flag
 {
@@ -144,59 +146,47 @@ static NSString *glcolorIdentifier = @"GLColor";
 		[item setMinSize:[_colorWell bounds].size];
 		return item;
 	}
-	else if ([itemIdentifier isEqualToString:nscolorIdentifier]) {
-		NSToolbarItem *item = [[NSToolbarItem alloc] initWithItemIdentifier:itemIdentifier];
-		[item setLabel:itemIdentifier];
-		[item setImage:nil];
-		[item setTarget:self];
-		[item setAction:@selector(toggleViewAction:)];
-		[item setImage:[NSImage imageNamed:@"NSColorItem"]];
-		return item;
-	}
-	else if ([itemIdentifier isEqualToString:uicolorIdentifier]) {
-		NSToolbarItem *item = [[NSToolbarItem alloc] initWithItemIdentifier:itemIdentifier];
-		[item setLabel:itemIdentifier];
-		[item setImage:nil];
-		[item setTarget:self];
-		[item setAction:@selector(toggleViewAction:)];
-		[item setImage:[NSImage imageNamed:@"UIColorItem"]];
-		return item;
-	}
-	else if ([itemIdentifier isEqualToString:cgcolorIdentifier]) {
-		NSToolbarItem *item = [[NSToolbarItem alloc] initWithItemIdentifier:itemIdentifier];
-		[item setLabel:itemIdentifier];
-		[item setImage:nil];
-		[item setTarget:self];
-		[item setAction:@selector(toggleViewAction:)];
-		[item setImage:[NSImage imageNamed:@"CGColorItem"]];
-		return item;
-	}
-	else if ([itemIdentifier isEqualToString:glcolorIdentifier]) {
-		NSToolbarItem *item = [[NSToolbarItem alloc] initWithItemIdentifier:itemIdentifier];
-		[item setLabel:itemIdentifier];
-		[item setImage:nil];
-		[item setTarget:self];
-		[item setAction:@selector(toggleViewAction:)];
-		[item setImage:[NSImage imageNamed:@"GLColorItem"]];
-		return item;
+
+	NSDictionary *map = @{nscolorIdentifier: @"NSColorItem",
+						  uicolorIdentifier: @"UIColorItem",
+						  cgcolorIdentifier: @"CGColorItem",
+						  glcolorIdentifier: @"GLColorItem"};
+
+	if (![[map allKeys] containsObject:itemIdentifier]) {
+		return nil;
 	}
 
-	return nil;
+	NSToolbarItem *item = [[NSToolbarItem alloc] initWithItemIdentifier:itemIdentifier];
+	[item setLabel:itemIdentifier];
+	[item setImage:nil];
+	[item setTarget:self];
+	[item setAction:@selector(toggleViewAction:)];
+	[item setImage:[NSImage imageNamed:map[itemIdentifier]]];
+	return item;
 }
 
 - (NSArray *)toolbarAllowedItemIdentifiers:(NSToolbar *)toolbar
 {
-	return [NSArray arrayWithObjects:colorWellIdentifier, NSToolbarSeparatorItemIdentifier, NSToolbarFlexibleSpaceItemIdentifier, nscolorIdentifier, uicolorIdentifier, cgcolorIdentifier, glcolorIdentifier, nil];
+	return @[colorWellIdentifier, NSToolbarSeparatorItemIdentifier, NSToolbarFlexibleSpaceItemIdentifier, nscolorIdentifier, uicolorIdentifier, cgcolorIdentifier, glcolorIdentifier];
 }
 
 - (NSArray *)toolbarDefaultItemIdentifiers:(NSToolbar *)toolbar
 {
-	return [NSArray arrayWithObjects:colorWellIdentifier, NSToolbarSeparatorItemIdentifier, NSToolbarFlexibleSpaceItemIdentifier, nscolorIdentifier, uicolorIdentifier, cgcolorIdentifier, glcolorIdentifier, nil];
+	return @[colorWellIdentifier, NSToolbarSeparatorItemIdentifier, NSToolbarFlexibleSpaceItemIdentifier, nscolorIdentifier, uicolorIdentifier, cgcolorIdentifier, glcolorIdentifier];
 }
 
 - (NSArray *)toolbarSelectableItemIdentifiers:(NSToolbar *)toolbar
 {
-	return [NSArray arrayWithObjects:nscolorIdentifier, uicolorIdentifier, cgcolorIdentifier, glcolorIdentifier, nil];
+	return @[nscolorIdentifier, uicolorIdentifier, cgcolorIdentifier, glcolorIdentifier];
+}
+
+@end
+
+@implementation ZBMainWindowController (Window)
+
+- (void)windowWillClose:(NSNotification *)notification
+{
+	[[NSColorPanel sharedColorPanel] orderOut:self];
 }
 
 @end

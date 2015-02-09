@@ -7,6 +7,12 @@
 
 #import "ZBCGColorViewController.h"
 
+@interface ZBCGColorViewController ()
+@property (weak, nonatomic) IBOutlet ZBSourceCodeView *colorCreateView;
+@property (weak, nonatomic) IBOutlet ZBSourceCodeView *colorCreateGenericRGBView;
+@property (weak, nonatomic) IBOutlet ZBSourceCodeView *colorCreateGenericCMYKView;
+@property (weak, nonatomic) IBOutlet NSMatrix *matrix;
+@end
 
 @implementation ZBCGColorViewController
 

@@ -7,7 +7,6 @@
 
 #import "ZBSourceCodeTextField.h"
 
-
 @implementation ZBSourceCodeTextField
 
 - (NSImage *)textImage
@@ -39,7 +38,7 @@
 	NSImage *image = [self textImage];
 	NSPoint p = NSMakePoint(0, [image size].height);
 	NSPasteboard *pasteboard = [NSPasteboard generalPasteboard];
-	NSArray *types = [NSArray arrayWithObjects: NSStringPboardType, nil];
+	NSArray *types = @[NSStringPboardType];
 	NSSize offset = NSMakeSize(0, 0);
 	[pasteboard declareTypes:types owner:self];
 	[pasteboard setString:[self stringValue] forType:NSStringPboardType];
