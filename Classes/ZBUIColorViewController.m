@@ -20,7 +20,7 @@
 - (void)loadNib
 {
 	[super loadNib];
-	BOOL loaded = [NSBundle loadNibNamed:@"ZBUIColorViewController" owner:self];
+	BOOL loaded = [[NSBundle mainBundle] loadNibNamed:@"ZBUIColorViewController" owner:self topLevelObjects:nil];
 	NSAssert((loaded == YES), @"NIB did not load");
 	[_classHSBView setTitle:@"HSB"];
 	[_classRGBView setTitle:@"RGB"];

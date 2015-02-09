@@ -20,7 +20,7 @@
 - (void)loadNib
 {
 	[super loadNib];
-	BOOL loaded = [NSBundle loadNibNamed:@"ZBGLColorViewController" owner:self];
+	BOOL loaded = [[NSBundle mainBundle] loadNibNamed:@"ZBGLColorViewController" owner:self topLevelObjects:nil];
 	NSAssert((loaded == YES), @"NIB did not load");
 	[_glColor3fView setTitle:@"glColor3f"];
 	[_glColor3fvView setTitle:@"glColor3fv"];

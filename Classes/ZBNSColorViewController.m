@@ -21,7 +21,7 @@
 - (void)loadNib
 {
 	[super loadNib];
-	BOOL loaded = [NSBundle loadNibNamed:@"ZBNSColorViewController" owner:self];
+	BOOL loaded = [[NSBundle mainBundle] loadNibNamed:@"ZBNSColorViewController" owner:self topLevelObjects:nil];
 	NSAssert((loaded == YES), @"NIB did not load");
 
 	[_hsbView setTitle:@"HSB"];

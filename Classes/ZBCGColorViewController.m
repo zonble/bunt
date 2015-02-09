@@ -20,7 +20,7 @@
 - (void)loadNib
 {
 	[super loadNib];
-	BOOL loaded = [NSBundle loadNibNamed:@"ZBCGColorViewController" owner:self];
+	BOOL loaded = [[NSBundle mainBundle] loadNibNamed:@"ZBCGColorViewController" owner:self topLevelObjects:nil];
 	NSAssert((loaded == YES), @"NIB did not load");
 	[_colorCreateView setTitle:@"CGColorCreate"];
 	[_colorCreateGenericRGBView setTitle:@"CGColorCreateGenericRGB"];

@@ -19,7 +19,7 @@
 - (void)loadNib
 {
 	[super loadNib];
-	BOOL loaded = [NSBundle loadNibNamed:@"ZBSettingsViewController" owner:self];
+	BOOL loaded = [[NSBundle mainBundle] loadNibNamed:@"ZBSettingsViewController" owner:self topLevelObjects:nil];
 	NSAssert((loaded == YES), @"NIB did not load");
 
 	NSInteger lang = [[NSUserDefaults standardUserDefaults] integerForKey:buntPreferredLanguage];
