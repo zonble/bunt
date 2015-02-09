@@ -7,8 +7,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-#define buntLastUsedToolbarItem @"buntLastUsedToolbarItem"
-
 /*!
     @header ZBMainWindowController
     @abstract   The main controller class of the Bunt application.

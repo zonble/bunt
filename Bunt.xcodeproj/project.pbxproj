@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 45;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -27,6 +27,9 @@
 		D449EA980F6294B7003683D8 /* Bunt32.png in Resources */ = {isa = PBXBuildFile; fileRef = D449EA960F6294B7003683D8 /* Bunt32.png */; };
 		D449EA990F6294B7003683D8 /* Bunt32w.png in Resources */ = {isa = PBXBuildFile; fileRef = D449EA970F6294B7003683D8 /* Bunt32w.png */; };
 		D473BF511017DA52008D5AC1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D473BF4F1017DA52008D5AC1 /* Localizable.strings */; };
+		D4CFEF591A890F0700BF79C7 /* ZBSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CFEF581A890F0700BF79C7 /* ZBSettingsViewController.m */; };
+		D4CFEF5C1A890F1E00BF79C7 /* ZBSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4CFEF5A1A890F1E00BF79C7 /* ZBSettingsViewController.xib */; };
+		D4CFEF611A89126F00BF79C7 /* ZBSettingKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CFEF601A89126F00BF79C7 /* ZBSettingKeys.m */; };
 		D4FFBC370F5C832F00B34E9C /* NSColorItem.png in Resources */ = {isa = PBXBuildFile; fileRef = D4FFBC350F5C832F00B34E9C /* NSColorItem.png */; };
 		D4FFBC380F5C832F00B34E9C /* UIColorItem.png in Resources */ = {isa = PBXBuildFile; fileRef = D4FFBC360F5C832F00B34E9C /* UIColorItem.png */; };
 		D4FFBC520F5C84AE00B34E9C /* GLColorItem.png in Resources */ = {isa = PBXBuildFile; fileRef = D4FFBC510F5C84AE00B34E9C /* GLColorItem.png */; };
@@ -34,7 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		1DDD58150DA1D0A300B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -68,7 +71,7 @@
 		D449EA960F6294B7003683D8 /* Bunt32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Bunt32.png; path = Images/Bunt32.png; sourceTree = "<group>"; };
 		D449EA970F6294B7003683D8 /* Bunt32w.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Bunt32w.png; path = Images/Bunt32w.png; sourceTree = "<group>"; };
 		D46EC90D101BF45F003D31E3 /* zh_CN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_CN; path = zh_CN.lproj/Localizable.strings; sourceTree = "<group>"; };
-		D46EC914101BF48E003D31E3 /* zh_CN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_CN; path = zh_CN.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D46EC914101BF48E003D31E3 /* zh_CN */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = zh_CN; path = zh_CN.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D46EC919101BF4A1003D31E3 /* zh_CN */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = zh_CN; path = zh_CN.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		D46EC91B101BF4F5003D31E3 /* zh_CN */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = zh_CN; path = zh_CN.lproj/ZBNSColorViewController.xib; sourceTree = "<group>"; };
 		D46EC91E101BF51B003D31E3 /* zh_CN */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = zh_CN; path = zh_CN.lproj/ZBUIColorViewController.xib; sourceTree = "<group>"; };
@@ -81,7 +84,14 @@
 		D473BF6C1017DB53008D5AC1 /* zh_TW */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = zh_TW; path = zh_TW.lproj/ZBUIColorViewController.xib; sourceTree = "<group>"; };
 		D473BF6F1017DBA8008D5AC1 /* zh_TW */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = zh_TW; path = zh_TW.lproj/ZBCGColorViewController.xib; sourceTree = "<group>"; };
 		D473BF701017DBAE008D5AC1 /* zh_TW */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = zh_TW; path = zh_TW.lproj/ZBGLColorViewController.xib; sourceTree = "<group>"; };
-		D473BF721017DBC2008D5AC1 /* zh_TW */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_TW; path = zh_TW.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D473BF721017DBC2008D5AC1 /* zh_TW */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = zh_TW; path = zh_TW.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D4CFEF571A890F0700BF79C7 /* ZBSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZBSettingsViewController.h; path = Classes/ZBSettingsViewController.h; sourceTree = "<group>"; };
+		D4CFEF581A890F0700BF79C7 /* ZBSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZBSettingsViewController.m; path = Classes/ZBSettingsViewController.m; sourceTree = "<group>"; };
+		D4CFEF5B1A890F1E00BF79C7 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/ZBSettingsViewController.xib; sourceTree = "<group>"; };
+		D4CFEF5D1A890F9E00BF79C7 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hant"; path = "zh-Hant.lproj/ZBSettingsViewController.xib"; sourceTree = "<group>"; };
+		D4CFEF5E1A890F9F00BF79C7 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hans"; path = "zh-Hans.lproj/ZBSettingsViewController.xib"; sourceTree = "<group>"; };
+		D4CFEF5F1A89126F00BF79C7 /* ZBSettingKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZBSettingKeys.h; path = Classes/ZBSettingKeys.h; sourceTree = "<group>"; };
+		D4CFEF601A89126F00BF79C7 /* ZBSettingKeys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZBSettingKeys.m; path = Classes/ZBSettingKeys.m; sourceTree = "<group>"; };
 		D4FFBC350F5C832F00B34E9C /* NSColorItem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = NSColorItem.png; path = Images/NSColorItem.png; sourceTree = "<group>"; };
 		D4FFBC360F5C832F00B34E9C /* UIColorItem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = UIColorItem.png; path = Images/UIColorItem.png; sourceTree = "<group>"; };
 		D4FFBC510F5C84AE00B34E9C /* GLColorItem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GLColorItem.png; path = Images/GLColorItem.png; sourceTree = "<group>"; };
@@ -119,6 +129,10 @@
 				D449EA210F62101F003683D8 /* ZBCGColorViewController.m */,
 				D449EA220F62101F003683D8 /* ZBGLColorViewController.h */,
 				D449EA230F62101F003683D8 /* ZBGLColorViewController.m */,
+				D4CFEF571A890F0700BF79C7 /* ZBSettingsViewController.h */,
+				D4CFEF581A890F0700BF79C7 /* ZBSettingsViewController.m */,
+				D4CFEF5F1A89126F00BF79C7 /* ZBSettingKeys.h */,
+				D4CFEF601A89126F00BF79C7 /* ZBSettingKeys.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -182,6 +196,7 @@
 				D43E2C9F0F5C4C8C002C282A /* ZBUIColorViewController.xib */,
 				D43E2CAB0F5C4CE9002C282A /* ZBCGColorViewController.xib */,
 				D43E2CBE0F5C4D8C002C282A /* ZBGLColorViewController.xib */,
+				D4CFEF5A1A890F1E00BF79C7 /* ZBSettingsViewController.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -236,9 +251,10 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0620;
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Bunt" */;
-			compatibilityVersion = "Xcode 3.1";
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
@@ -248,6 +264,8 @@
 				German,
 				zh_TW,
 				zh_CN,
+				"zh-Hant",
+				"zh-Hans",
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* Bunt */;
 			projectDirPath = "";
@@ -275,6 +293,7 @@
 				D4FFBC640F5C867B00B34E9C /* CGColorItem.png in Resources */,
 				D449EA880F629398003683D8 /* Bunt.icns in Resources */,
 				D449EA980F6294B7003683D8 /* Bunt32.png in Resources */,
+				D4CFEF5C1A890F1E00BF79C7 /* ZBSettingsViewController.xib in Resources */,
 				D449EA990F6294B7003683D8 /* Bunt32w.png in Resources */,
 				D473BF511017DA52008D5AC1 /* Localizable.strings in Resources */,
 			);
@@ -290,6 +309,8 @@
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				D449EA300F62101F003683D8 /* ZBCGColorViewController.m in Sources */,
 				D449EA310F62101F003683D8 /* ZBGLColorViewController.m in Sources */,
+				D4CFEF611A89126F00BF79C7 /* ZBSettingKeys.m in Sources */,
+				D4CFEF591A890F0700BF79C7 /* ZBSettingsViewController.m in Sources */,
 				D449EA320F62101F003683D8 /* ZBMainWindowController.m in Sources */,
 				D449EA330F62101F003683D8 /* ZBNSColorViewController.m in Sources */,
 				D449EA340F62101F003683D8 /* ZBSourceCodeTextField.m in Sources */,
@@ -372,6 +393,16 @@
 			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
+		D4CFEF5A1A890F1E00BF79C7 /* ZBSettingsViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4CFEF5B1A890F1E00BF79C7 /* English */,
+				D4CFEF5D1A890F9E00BF79C7 /* zh-Hant */,
+				D4CFEF5E1A890F9F00BF79C7 /* zh-Hans */,
+			);
+			name = ZBSettingsViewController.xib;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -379,8 +410,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -390,7 +421,7 @@
 				GCC_PREFIX_HEADER = Bunt_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = Bunt;
 			};
 			name = Debug;
@@ -399,15 +430,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Bunt_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = Bunt;
 			};
 			name = Release;
@@ -415,7 +446,6 @@
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -429,7 +459,6 @@
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;

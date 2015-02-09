@@ -6,6 +6,7 @@
 //
 
 #import "ZBCGColorViewController.h"
+#import "ZBSettingKeys.h"
 
 @interface ZBCGColorViewController ()
 @property (weak, nonatomic) IBOutlet ZBSourceCodeView *colorCreateView;
@@ -33,12 +34,24 @@
 	NSColor *rgbColor = nil;
 	NSColor *cmykColor = [color colorUsingColorSpaceName:NSDeviceCMYKColorSpace];
 
+	BOOL isSwift = [[NSUserDefaults standardUserDefaults] integerForKey:buntPreferredLanguage];
+
 	if ([[_matrix selectedCell] tag]) {
-		 rgbColor = [color colorUsingColorSpaceName:NSDeviceRGBColorSpace];
-		createColorString = [NSString stringWithFormat:@"CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();\nconst CGFloat components[4] = {%1.2f, %1.2f, %1.2f, %1.2f};\nCGColorRef color = CGColorCreate(colorSpace, components);\nCGColorRelease(color);",[rgbColor redComponent], [rgbColor greenComponent], [rgbColor blueComponent], [rgbColor alphaComponent]];
+		rgbColor = [color colorUsingColorSpaceName:NSDeviceRGBColorSpace];
+		if (isSwift) {
+			createColorString = [NSString stringWithFormat:@"var colorSpace = CGColorSpaceCreateDeviceRGB()\nvar components :[CGFloat] = [%1.2f, %1.2f, %1.2f, %1.2f]\nvar color = CGColorCreate(colorSpace, &components)",[rgbColor redComponent], [rgbColor greenComponent], [rgbColor blueComponent], [rgbColor alphaComponent]];;
+		}
+		else {
+			createColorString = [NSString stringWithFormat:@"CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();\nconst CGFloat components[4] = {%1.2f, %1.2f, %1.2f, %1.2f};\nCGColorRef color = CGColorCreate(colorSpace, components);\nCGColorRelease(color);",[rgbColor redComponent], [rgbColor greenComponent], [rgbColor blueComponent], [rgbColor alphaComponent]];
+		}
 	}
 	else {
-		createColorString = [NSString stringWithFormat:@"CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceCMYK();\nconst CGFloat components[5] = {%1.2f, %1.2f, %1.2f, %1.2f, %1.2f};\nCGColorRef color = CGColorCreate(colorSpace, components);\nCGColorRelease(color);", [cmykColor cyanComponent], [cmykColor magentaComponent], [cmykColor yellowComponent], [cmykColor blackComponent], [cmykColor alphaComponent]];
+		if (isSwift) {
+			createColorString = [NSString stringWithFormat:@"var colorSpace = CGColorSpaceCreateDeviceCMYK()\nvar components :[CGFloat] = [%1.2f, %1.2f, %1.2f, %1.2f, %1.2f]\nvar color = CGColorCreate(colorSpace, &components)", [cmykColor cyanComponent], [cmykColor magentaComponent], [cmykColor yellowComponent], [cmykColor blackComponent], [cmykColor alphaComponent]];
+		}
+		else {
+			createColorString = [NSString stringWithFormat:@"CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceCMYK();\nconst CGFloat components[5] = {%1.2f, %1.2f, %1.2f, %1.2f, %1.2f};\nCGColorRef color = CGColorCreate(colorSpace, components);\nCGColorRelease(color);", [cmykColor cyanComponent], [cmykColor magentaComponent], [cmykColor yellowComponent], [cmykColor blackComponent], [cmykColor alphaComponent]];
+		}
 	}
 	[_colorCreateView setText:createColorString];
 
