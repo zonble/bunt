@@ -1,0 +1,12 @@
+
+/* Class = "NSTextFieldCell"; title = "Preferred Programming Language"; ObjectID = "Uag-fN-XDB"; */
+"Uag-fN-XDB.title" = "Preferred Programming Language";
+
+/* Class = "NSButtonCell"; title = "Swift"; ObjectID = "dPz-xE-nJg"; */
+"dPz-xE-nJg.title" = "Swift";
+
+/* Class = "NSButtonCell"; title = "Objective-C"; ObjectID = "hpG-Pj-1XE"; */
+"hpG-Pj-1XE.title" = "Objective-C";
+
+/* Class = "NSButtonCell"; title = "Radio"; ObjectID = "lh2-oX-WRo"; */
+"lh2-oX-WRo.title" = "Radio";

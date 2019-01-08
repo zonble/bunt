@@ -1,0 +1,18 @@
+
+/* Class = "NSButtonCell"; title = "CGColorSpaceCreateDeviceRGB()"; ObjectID = "4"; */
+"4.title" = "CGColorSpaceCreateDeviceRGB()";
+
+/* Class = "NSButtonCell"; title = "CGColorSpaceCreateDeviceCMYK()"; ObjectID = "5"; */
+"5.title" = "CGColorSpaceCreateDeviceCMYK()";
+
+/* Class = "NSButtonCell"; title = "Radio"; ObjectID = "6"; */
+"6.title" = "Radio";
+
+/* Class = "NSTextFieldCell"; title = "10.3 \niPhone 2.0"; ObjectID = "14"; */
+"14.title" = "10.3 \niPhone 2.0";
+
+/* Class = "NSTextFieldCell"; title = "10.5"; ObjectID = "16"; */
+"16.title" = "10.5";
+
+/* Class = "NSTextFieldCell"; title = "10.5"; ObjectID = "18"; */
+"18.title" = "10.5";

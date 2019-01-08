@@ -1,0 +1,12 @@
+
+/* Class = "NSButtonCell"; title = "Use Calibreated Color"; ObjectID = "4"; */
+"4.title" = "Use Calibreated Color";
+
+/* Class = "NSButtonCell"; title = "Use Device Color"; ObjectID = "5"; */
+"5.title" = "Use Device Color";
+
+/* Class = "NSButtonCell"; title = "Radio"; ObjectID = "6"; */
+"6.title" = "Radio";
+
+/* Class = "NSBox"; title = "Color Setting"; ObjectID = "7"; */
+"7.title" = "Color Setting";
