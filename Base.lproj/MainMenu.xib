@@ -12,7 +12,11 @@
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application"/>
+        <customObject id="-3" userLabel="Application">
+            <connections>
+                <outlet property="delegate" destination="450" id="470"/>
+            </connections>
+        </customObject>
         <menu title="AMainMenu" systemMenu="main" id="29" userLabel="MainMenu">
             <items>
                 <menuItem title="Bunt" id="56">
@@ -269,26 +273,26 @@
         </customObject>
         <menu id="459">
             <items>
-                <menuItem title="顯示 Bunt" id="460">
+                <menuItem title="Show Bunt" id="460">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="showWindow:" target="450" id="467"/>
                     </connections>
                 </menuItem>
-                <menuItem title="Bunt 首頁" id="468">
+                <menuItem title="Visist Bunt Homepage" id="468">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="openHomepageURLAction:" target="450" id="469"/>
                     </connections>
                 </menuItem>
-                <menuItem title="關於 Bunt" id="461">
+                <menuItem title="About Bunt" id="461">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="orderFrontStandardAboutPanel:" target="-2" id="464"/>
                     </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="463"/>
-                <menuItem title="結束 Bunt" keyEquivalent="q" id="462">
+                <menuItem title="Quit Bunt" keyEquivalent="q" id="462">
                     <connections>
                         <action selector="terminate:" target="-2" id="465"/>
                     </connections>
