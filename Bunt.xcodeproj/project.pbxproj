@@ -86,12 +86,6 @@
 		D474BA7321E4539F00CAD2EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ZBCGColorViewController.xib; sourceTree = "<group>"; };
 		D474BA7421E4539F00CAD2EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ZBGLColorViewController.xib; sourceTree = "<group>"; };
 		D474BA7521E453A000CAD2EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ZBSettingsViewController.xib; sourceTree = "<group>"; };
-		D474BA7721E453B700CAD2EE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ZBUIColorViewController.strings; sourceTree = "<group>"; };
-		D474BA7921E4544100CAD2EE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MainMenu.strings; sourceTree = "<group>"; };
-		D474BA7B21E4544500CAD2EE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ZBNSColorViewController.strings; sourceTree = "<group>"; };
-		D474BA7D21E4544B00CAD2EE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ZBCGColorViewController.strings; sourceTree = "<group>"; };
-		D474BA7F21E4545100CAD2EE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ZBGLColorViewController.strings; sourceTree = "<group>"; };
-		D474BA8121E4545400CAD2EE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ZBSettingsViewController.strings; sourceTree = "<group>"; };
 		D4CFEF571A890F0700BF79C7 /* ZBSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZBSettingsViewController.h; path = Classes/ZBSettingsViewController.h; sourceTree = "<group>"; };
 		D4CFEF581A890F0700BF79C7 /* ZBSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZBSettingsViewController.m; path = Classes/ZBSettingsViewController.m; sourceTree = "<group>"; };
 		D4CFEF5D1A890F9E00BF79C7 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hant"; path = "zh-Hant.lproj/ZBSettingsViewController.xib"; sourceTree = "<group>"; };
@@ -347,7 +341,6 @@
 				D473BF631017DAB7008D5AC1 /* zh_TW */,
 				D46EC919101BF4A1003D31E3 /* zh_CN */,
 				D474BA7021E4539F00CAD2EE /* Base */,
-				D474BA7921E4544100CAD2EE /* en */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -358,7 +351,6 @@
 				D473BF691017DB26008D5AC1 /* zh_TW */,
 				D46EC91B101BF4F5003D31E3 /* zh_CN */,
 				D474BA7121E4539F00CAD2EE /* Base */,
-				D474BA7B21E4544500CAD2EE /* en */,
 			);
 			name = ZBNSColorViewController.xib;
 			sourceTree = "<group>";
@@ -369,7 +361,6 @@
 				D473BF6C1017DB53008D5AC1 /* zh_TW */,
 				D46EC91E101BF51B003D31E3 /* zh_CN */,
 				D474BA7221E4539F00CAD2EE /* Base */,
-				D474BA7721E453B700CAD2EE /* en */,
 			);
 			name = ZBUIColorViewController.xib;
 			sourceTree = "<group>";
@@ -380,7 +371,6 @@
 				D473BF6F1017DBA8008D5AC1 /* zh_TW */,
 				D46EC920101BF544003D31E3 /* zh_CN */,
 				D474BA7321E4539F00CAD2EE /* Base */,
-				D474BA7D21E4544B00CAD2EE /* en */,
 			);
 			name = ZBCGColorViewController.xib;
 			sourceTree = "<group>";
@@ -391,7 +381,6 @@
 				D473BF701017DBAE008D5AC1 /* zh_TW */,
 				D46EC922101BF553003D31E3 /* zh_CN */,
 				D474BA7421E4539F00CAD2EE /* Base */,
-				D474BA7F21E4545100CAD2EE /* en */,
 			);
 			name = ZBGLColorViewController.xib;
 			sourceTree = "<group>";
@@ -412,7 +401,6 @@
 				D4CFEF5D1A890F9E00BF79C7 /* zh-Hant */,
 				D4CFEF5E1A890F9F00BF79C7 /* zh-Hans */,
 				D474BA7521E453A000CAD2EE /* Base */,
-				D474BA8121E4545400CAD2EE /* en */,
 			);
 			name = ZBSettingsViewController.xib;
 			sourceTree = "<group>";
