@@ -16,5 +16,4 @@ steps:
       scheme: ""
       sdk: "macosx"
       configuration: "Release"
-      xcWorkspacePath: "Bunt.xcodeproj/project.xcworkspace"
       xcodeVersion: "default" # Options: 8, 9, 10, default, specifyPath
