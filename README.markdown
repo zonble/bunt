@@ -1,8 +1,6 @@
-#Bunt
+# Bunt
 
 [![Build Status](https://travis-ci.org/zonble/bunt.png?branch=master)](https://travis-ci.org/zonble/bunt)
-
-Welcome to *Bunt*!
 
 ## What is Bunt?
 
