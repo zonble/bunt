@@ -1,3 +1,6 @@
+# DEPRECATED: This file is no longer used. Please see .github/workflows/build.yml for the current CI configuration.
+# The configuration below uses outdated macOS-10.13 and should not be used.
+
 # Xcode
 # Build, test, and archive an Xcode workspace on macOS.
 # Add steps that install certificates, test, sign, and distribute an app, save build artifacts, and more:
