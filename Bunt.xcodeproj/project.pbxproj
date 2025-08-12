@@ -422,7 +422,7 @@
 				GCC_PREFIX_HEADER = Bunt_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lithoglyph.${PRODUCT_NAME:identifier}";
 				PRODUCT_NAME = Bunt;
 			};
@@ -440,7 +440,7 @@
 				GCC_PREFIX_HEADER = Bunt_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lithoglyph.${PRODUCT_NAME:identifier}";
 				PRODUCT_NAME = Bunt;
 			};

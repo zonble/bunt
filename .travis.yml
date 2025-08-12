@@ -1,2 +1,3 @@
- language: objective-c
- script: xcodebuild
+ # DEPRECATED: This file is no longer used. Please see .github/workflows/build.yml for the current CI configuration.
+language: objective-c
+script: xcodebuild
