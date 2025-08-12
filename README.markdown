@@ -1,6 +1,5 @@
 # Bunt
 
-[![Build Status](https://travis-ci.org/zonble/bunt.png?branch=master)](https://travis-ci.org/zonble/bunt)
 [![Build](https://github.com/zonble/bunt/actions/workflows/build.yml/badge.svg)](https://github.com/zonble/bunt/actions/workflows/build.yml)
 
 ## What is Bunt?
@@ -18,7 +17,7 @@ Bunt supports
 
 Bunt requires
 
-* Mac OS X 11.0 (Big Sur) or later
+* macOS 11.0 (Big Sur) or later
 
 ## Feedback/Contact
 
