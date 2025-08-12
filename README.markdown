@@ -18,7 +18,7 @@ Bunt supports
 
 Bunt requires
 
-* Mac OS X 10.13 or later
+* Mac OS X 11.0 (Big Sur) or later
 
 ## Feedback/Contact
 
