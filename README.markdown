@@ -1,6 +1,6 @@
 # Bunt
 
-[![Build Status](https://travis-ci.org/zonble/bunt.png?branch=master)](https://travis-ci.org/zonble/bunt)
+[![CI](https://github.com/zonble/bunt/workflows/CI/badge.svg)](https://github.com/zonble/bunt/actions)
 
 ## What is Bunt?
 
